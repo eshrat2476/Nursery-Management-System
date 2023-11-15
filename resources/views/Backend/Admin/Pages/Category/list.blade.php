@@ -14,7 +14,7 @@
 <table class="table">
   <thead class="thead-light">
     <tr>
-      <th scope="col">ID</th>
+      <!-- <th scope="col">ID</th> -->
       <th scope="col">Category Name</th>
       <th scope="col">Price</th>
       <th scope="col">Image</th>
