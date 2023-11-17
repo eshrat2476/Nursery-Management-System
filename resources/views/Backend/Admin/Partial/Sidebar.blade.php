@@ -24,11 +24,8 @@
 
 
 
-
-
-
     <li class="nav-item">
-      <a class="nav-link collapsed" data-bs-target="#forms-nav" data-bs-toggle="collapse" href="{{route('admin_categories')}}">
+      <a class="nav-link collapsed"  href="{{route('admin_categories')}}">
         <i class="fa-solid fa-list-ul fa-beat"></i>
         <span>PLANT CATEGORIES</span>
       </a>
@@ -37,62 +34,12 @@
 
 
     <li class="nav-item">
-      <a class="nav-link collapsed" data-bs-target="#tables-nav" data-bs-toggle="collapse" href="#">
-        <i class="fa-solid fa-person fa-beat"></i>
-        <span>CUSTOMERS</span>
+      <a class="nav-link collapsed"  href="{{route('admin_care_tips')}}">
+        <i class="fa-solid fa-heart fa-flip"></i>
+        <span>CARE & TIPS</span>
       </a>
 
-    </li><!-- End Customers Nav -->
-
-
-
-
-    <li class="nav-item">
-      <a class="nav-link collapsed" data-bs-target="#tables-nav" data-bs-toggle="collapse" href="#">
-        <i class="fa-solid fa-store fa-beat"></i>
-        <span>ORDERS</span>
-      </a>
-
-    </li><!-- End ORDERS Nav -->
-
-
-
-
-
-
-    <li class="nav-item">
-      <a class="nav-link collapsed" data-bs-target="#charts-nav" data-bs-toggle="collapse" href="#">
-        <i class="fa-solid fa-bars fa-beat"></i>
-        <span>ORDER DETAILS</span>
-      </a>
-
-    </li><!-- End ORDER DETAILS Nav -->
-
-
-
-
-
-
-    <li class="nav-item">
-      <a class="nav-link collapsed" data-bs-target="#icons-nav" data-bs-toggle="collapse" href="#">
-        <i class="fa-solid fa-cart-shopping fa-beat"></i>
-        <span>CART</span>
-      </a>
-
-    </li><!-- End CART Nav -->
-
-
-
-
-
-
-    <li class="nav-item">
-      <a class="nav-link collapsed" data-bs-target="#icons-nav" data-bs-toggle="collapse" href="#">
-        <i class="fa-solid fa-money-check-dollar fa-beat"></i>
-        <span>PAYMENT</span>
-      </a>
-
-    </li><!-- End PAYMENT Nav -->
+    </li><!-- End CARE & TIPS Nav -->
 
 
 
@@ -109,36 +56,13 @@
 
 
     <li class="nav-item">
-      <a class="nav-link collapsed" data-bs-target="#icons-nav" data-bs-toggle="collapse" href="#">
+      <a class="nav-link collapsed" href="{{route('admin_offers')}}">
         <i class="fa-solid fa-shield-heart fa-beat"></i>
         <span>OFFERS</span>
       </a>
 
     </li><!-- End OFFERS Nav -->
 
-
-
-
-    <li class="nav-item">
-      <a class="nav-link collapsed" data-bs-target="#icons-nav" data-bs-toggle="collapse" href="#">
-        <i class="fa-solid fa-heart fa-flip"></i>
-        <span>CARE & TIPS</span>
-      </a>
-
-    </li><!-- End CARE & TIPS Nav -->
-
-
-
-
-
-
-    <li class="nav-item">
-      <a class="nav-link collapsed" data-bs-target="#icons-nav" data-bs-toggle="collapse" href="#">
-        <i class="fa-solid fa-address-book fa-beat"></i>
-        <span>CONTACT</span>
-      </a>
-
-    </li><!-- End REPORT Nav -->
 
 
 
