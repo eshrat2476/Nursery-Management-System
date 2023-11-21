@@ -3,6 +3,8 @@
 
 @section('content')
 
+
+<div class="container">
 <form action="{{route('customer.do.login')}}" method="post">
     @csrf
 
@@ -20,5 +22,7 @@
 
   <button type="submit" class="btn btn-primary">Login</button>
 </form>
+
+</div>
 
 @endsection

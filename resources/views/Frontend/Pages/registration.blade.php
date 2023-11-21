@@ -2,6 +2,8 @@
 
 @section('content')
 
+<div class="container">
+
 
 <form action="{{route('customer.store')}}" method="post">
     @csrf
@@ -21,9 +23,12 @@
     <label for="exampleInputPassword1">Password</label>
     <input name="password" type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
   </div>
-
+   
+  <br>
 
   <button type="submit" class="btn btn-primary">Submit</button>
 </form>
+
+</div>
 
 @endsection

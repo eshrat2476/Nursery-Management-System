@@ -25,7 +25,7 @@
 
 
     <li class="nav-item">
-      <a class="nav-link collapsed"  href="{{route('admin_categories')}}">
+      <a class="nav-link collapsed" href="{{route('admin_categories')}}">
         <i class="fa-solid fa-list-ul fa-beat"></i>
         <span>PLANT CATEGORIES</span>
       </a>
@@ -34,7 +34,7 @@
 
 
     <li class="nav-item">
-      <a class="nav-link collapsed"  href="{{route('admin_care_tips')}}">
+      <a class="nav-link collapsed" href="{{route('admin_care_tips')}}">
         <i class="fa-solid fa-heart fa-flip"></i>
         <span>CARE & TIPS</span>
       </a>
@@ -62,6 +62,16 @@
       </a>
 
     </li><!-- End OFFERS Nav -->
+
+
+
+    <li class="nav-item">
+      <a class="nav-link collapsed" href="{{route('admin_users')}}">
+        <i class="fa-solid fa-user fa-bounce"></i>
+        <span>USERS</span>
+      </a>
+
+    </li><!-- End USERS Nav -->
 
 
 

@@ -69,6 +69,14 @@ Route::get('/offers',[OfferController::class,'list'])->name('admin_offers');
 Route::get('/offers-create',[OfferController::class,'create'])->name('admin_offers_create');
 Route::post('/offers-store',[OfferController::class,'store'])->name('admin_offers_store');
 
+
+//Users
+
+Route::get('/users',[UserController::class,'list'])->name('admin_users');
+Route::get('/users-create',[UserController::class,'create'])->name('admin_user_create');
+Route::post('/users-store',[UserController::class,'store'])->name('admin_user_store');
+
+
 });
 
 });
