@@ -4,6 +4,15 @@
 
 <head>
   <meta charset="utf-8">
+
+  @notifyCss
+
+  <style>
+    .notify{
+        z-index: 1000000;
+    }
+</style>
+
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
   <title>Development of Nursery Management System</title>
@@ -42,6 +51,7 @@
 
 <body>
 
+<x-notify::notify/>
 
 
 
@@ -109,6 +119,9 @@
 
   <!-- Template Main JS File -->
   <script src="{{asset('backend')}}/js/main.js"></script>
+
+  @notifyJs
+
 
 </body>
 

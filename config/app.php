@@ -156,9 +156,13 @@ return [
     */
 
     'providers' => ServiceProvider::defaultProviders()->merge([
+        
         /*
          * Package Service Providers...
          */
+
+
+         Mckenziearts\Notify\LaravelNotifyServiceProvider::class,
 
         /*
          * Application Service Providers...
