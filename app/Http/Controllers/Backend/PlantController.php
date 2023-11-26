@@ -35,10 +35,18 @@ class PlantController extends Controller
      }
 
 
+     $file_name=null;
+     if($request->hasFile('plantimage')){
+        $photo=$request->file('plantimage');
+        $file_name=date('YmdHis').'.'.$photo->getClientOriginalExtension();
+        $photo->storeAs('uploads/',$file_name);
+     }
+
+
         Plant::create([
             'plantname'=>$request->plantname,
             'plantprice'=>$request->plantprice,
-            'plantimage'=>$request->plantimage,
+            'plantimage'=>$file_name,
             'plantdescription'=>$request->plantdescription,
         ]);
     return redirect(route('admin_plants'));

@@ -46,9 +46,10 @@
      <div class="collapse navbar-collapse" id="navbarCollapse">
          <div class="navbar-nav ms-auto p-4 p-lg-0">
              <a href="index.html" class="nav-item nav-link active">Home</a>
-             <a href="project.html" class="nav-item nav-link">Offers</a>
+             <a href="project.html" class="nav-item nav-link">Plants</a>
+
              <div class="nav-item dropdown">
-                 <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Plants</a>
+                 <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Categories</a>
                  <div class="dropdown-menu bg-light m-0">
                      <a href="feature.html" class="dropdown-item"></a>
                      <a href="team.html" class="dropdown-item"></a>
@@ -56,6 +57,8 @@
                      <a href="404.html" class="dropdown-item"></a>
                  </div>
              </div>
+             <a href="project.html" class="nav-item nav-link">Offers</a>
+
              <a href="contact.html" class="nav-item nav-link">Contact</a>
          </div>
          @guest

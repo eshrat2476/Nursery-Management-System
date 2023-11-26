@@ -3,7 +3,7 @@
 
 @section('content')
 
-<form action="{{route('admin_plants_store')}}"    method="post">
+<form action="{{route('admin_plants_store')}}"    method="post"  enctype="multipart/form-data">
     @csrf
   <div class="form-group">
     <label for="inputPlantName">Plant Name</label>

@@ -27,7 +27,9 @@
       <th scope="row">{{$Plant_item->id}}</th>
       <td>{{$Plant_item->plantname}}</td>
       <td>{{$Plant_item->plantprice}}</td>
-      <td>{{$Plant_item->plantimage}}</td>
+      <td>
+        <img style="height:60px; width:60px;" src="{{url('uploads/',$Plant_item->plantimage)}}" alt="plantimage">
+      </td>
       <td>{{$Plant_item->plantdescription}}</td>
       <td>
         <a class="btn btn-primary btn-sm" href="#">View</a>
