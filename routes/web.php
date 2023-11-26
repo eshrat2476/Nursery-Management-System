@@ -9,6 +9,7 @@ use App\Http\Controllers\Backend\UserController;
 use App\Http\Controllers\Backend\OfferController;
 use App\Http\Controllers\Frontend\CustomerController;
 use App\Http\Controllers\Frontend\HomeController as FrontendHomeController;
+use App\Http\Controllers\Frontend\PlantController as FrontendPlantController;
 
 
 /*
@@ -81,6 +82,10 @@ Route::post('/users-store',[UserController::class,'store'])->name('admin_user_st
 
 });
 
+
+
+
+
 //All Website Routes
 
 //home
@@ -102,5 +107,6 @@ Route::post('/login',[CustomerController::class,'doLogin'])->name('customer.do.l
 
 Route::get('/logout',[CustomerController::class,'logout'])->name('customer.logout');
 
+//Plants
 
-
+Route::get('/website_plants',[FrontendPlantController::class,'showlist'])->name('website_plants');

@@ -46,7 +46,7 @@
      <div class="collapse navbar-collapse" id="navbarCollapse">
          <div class="navbar-nav ms-auto p-4 p-lg-0">
              <a href="index.html" class="nav-item nav-link active">Home</a>
-             <a href="project.html" class="nav-item nav-link">Plants</a>
+             <a href="{{route('website_plants')}}" class="nav-item nav-link">Plants</a>
 
              <div class="nav-item dropdown">
                  <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Categories</a>

@@ -69,13 +69,15 @@
 
     @yield('carousel')
 
+    @yield('content')
+
+
     </div>
     <!-- Carousel End -->
 
 
     <!--  -->
     
-    @yield('content')
     
     <!--  -->
 
