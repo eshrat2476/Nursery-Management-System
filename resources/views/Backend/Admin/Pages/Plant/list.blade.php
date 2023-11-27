@@ -17,6 +17,7 @@
       <th scope="col">Name</th>
       <th scope="col">Price</th>
       <th scope="col">Image</th>
+      <th scope="col">Plant Category</th>
       <th scope="col">Description</th>
       <th scope="col">Action</th>
     </tr>
@@ -30,6 +31,7 @@
       <td>
         <img style="height:60px; width:60px;" src="{{url('uploads/',$Plant_item->plantimage)}}" alt="plantimage">
       </td>
+      <td>{{$Plant_item->plantcategory}}</td>
       <td>{{$Plant_item->plantdescription}}</td>
       <td>
         <a class="btn btn-primary btn-sm" href="#">View</a>

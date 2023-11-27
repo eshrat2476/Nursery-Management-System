@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string('plantname');
             $table->string('plantprice');
             $table->string('plantimage');
+            $table->string('plantcategory');
             $table->string('plantdescription');
             $table->timestamps();
         });

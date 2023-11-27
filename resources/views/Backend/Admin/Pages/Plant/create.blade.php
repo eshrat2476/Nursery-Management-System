@@ -32,6 +32,22 @@
   </div>
 
 
+<!-- dynamic category -->
+
+
+
+  <div class="form-group">
+    <label for="selectplantcategory">Plant Category</label>
+    <select class="form-control" name="category_name" id="">
+@foreach($plant_category as $plant_categoryitem)
+      <option value="{{$plant_categoryitem->categoryname}}">{{$plant_categoryitem->categoryname}}</option>
+@endforeach
+    </select>
+    @error('category_name')
+    <div class="alert alert-danger">{{$message}}</div>
+    @enderror
+  </div>
+
 
   <div class="form-group">
     <label for="inputPlantDescription">Plant Description</label>

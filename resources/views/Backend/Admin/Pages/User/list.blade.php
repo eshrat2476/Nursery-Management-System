@@ -34,6 +34,7 @@
   </tbody>
 </table>
 
+
 {{$User_data->links()}}
 
 @endsection

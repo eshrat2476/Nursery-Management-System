@@ -50,7 +50,7 @@ class UserController extends Controller
 
     public function list()
     {
-        $User_data=User::Paginate(2);
+        $User_data=User::Paginate(10);
 
         return view('Backend.Admin.Pages.User.list',compact('User_data'));
     }
