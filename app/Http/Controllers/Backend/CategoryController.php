@@ -22,21 +22,21 @@ class CategoryController extends Controller
 
     public function store(Request $request)
     {
-        $validate=Validator::make($request->all(),[
-            'categoryname'=>'required',
-            'categorydescription'=>'required'
+        $validate = Validator::make($request->all(), [
+            'categoryname' => 'required',
+            'categorydescription' => 'required'
         ]);
 
-        if($validate->fails()){
+        if ($validate->fails()) {
             return redirect()->back()->withErrors($validate);
         }
 
 
 
-            Category::create([
-                'categoryname' => $request->categoryname,
-                'categorydescription' => $request->categorydescription,
-            ]);
+        Category::create([
+            'categoryname' => $request->categoryname,
+            'categorydescription' => $request->categorydescription,
+        ]);
         return redirect(route('admin_categories'));
     }
 }

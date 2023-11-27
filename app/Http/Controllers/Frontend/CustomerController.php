@@ -30,7 +30,7 @@ class CustomerController extends Controller
 
 
 
-
+    //Login
 
 
     public function login()
@@ -66,20 +66,25 @@ class CustomerController extends Controller
 
 
 
+    //Logout
+
 
     public function logout()
     {
         auth()->logout();
-        
-        notify()->success('Logout Success.');    
+
+        notify()->success('Logout Success.');
         return redirect()->route('Home');
     }
 
-//Customer Profile
-
-public function profile(){
-    return view('Frontend.Pages.Profile.profile');
-}
 
 
+    
+
+    //Customer Profile
+
+    public function profile()
+    {
+        return view('Frontend.Pages.Profile.profile');
+    }
 }

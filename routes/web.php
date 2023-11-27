@@ -53,9 +53,22 @@ Route::get('/profile',[UserController::class,'profile'])->name('profile_view');
 Route::get('/',[HomeController::class,'home'])->name('home');
 
 
+
+
+
 //Plants
 
 Route::get('/plants',[PlantController::class,'list'])->name('admin_plants');
+
+Route::get('/plant/edit/{id}',[PlantController::class, 'edit'])->name('plant_edit');
+
+Route::get('/plant/delete/{id}',[PlantController::class, 'delete'])->name('plant_delete');
+
+Route::put('/plant/update/{id}',[PlantController::class, 'update'])->name('plant_update');
+
+
+
+
 Route::get('/plants-create',[PlantController::class,'create'])->name('admin_plants_create');
 Route::post('/plants-store',[PlantController::class,'store'])->name('admin_plants_store');
 

@@ -3,8 +3,8 @@
 
 @section('content')
 
-<form action="{{route('admin_plants_store')}}"    method="post"  enctype="multipart/form-data">
-    @csrf
+<form action="{{route('admin_plants_store')}}" method="post" enctype="multipart/form-data">
+  @csrf
   <div class="form-group">
     <label for="inputPlantName">Plant Name</label>
     <input type="text" class="form-control" name="plantname" id="inputPlantName" aria-describedby="emailHelp" placeholder="Enter Plant Name">
@@ -15,11 +15,11 @@
   </div>
 
   <label for="inputPlantPrice">Plant Price</label>
-    <input type="number" class="form-control" name="plantprice" id="inputPlantPrice" aria-describedby="emailHelp" placeholder="Enter Price">
-    <small id="emailHelp" class="form-text text-muted"></small>
-    @error('plantprice')
-    <div class="alert alert-danger">{{$message}}</div>
-    @enderror
+  <input type="number" class="form-control" name="plantprice" id="inputPlantPrice" aria-describedby="emailHelp" placeholder="Enter Price">
+  <small id="emailHelp" class="form-text text-muted"></small>
+  @error('plantprice')
+  <div class="alert alert-danger">{{$message}}</div>
+  @enderror
   </div>
 
 
@@ -32,16 +32,16 @@
   </div>
 
 
-<!-- dynamic category -->
+  <!-- dynamic category -->
 
 
 
   <div class="form-group">
     <label for="selectplantcategory">Plant Category</label>
     <select class="form-control" name="category_name" id="">
-@foreach($plant_category as $plant_categoryitem)
+      @foreach($plant_category as $plant_categoryitem)
       <option value="{{$plant_categoryitem->categoryname}}">{{$plant_categoryitem->categoryname}}</option>
-@endforeach
+      @endforeach
     </select>
     @error('category_name')
     <div class="alert alert-danger">{{$message}}</div>
@@ -57,7 +57,7 @@
     @enderror
   </div>
 
-  
+
   <div class="form-check">
     <input type="checkbox" class="form-check-input" id="exampleCheck1">
     <label class="form-check-label" for="exampleCheck1">Check me out</label>
