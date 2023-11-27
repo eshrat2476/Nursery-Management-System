@@ -74,4 +74,12 @@ class CustomerController extends Controller
         notify()->success('Logout Success.');    
         return redirect()->route('Home');
     }
+
+//Customer Profile
+
+public function profile(){
+    return view('Frontend.Pages.Profile.profile');
+}
+
+
 }

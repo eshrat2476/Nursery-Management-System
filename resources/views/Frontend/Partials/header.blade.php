@@ -69,7 +69,10 @@
 
         @auth
         <a href="{{route('customer.logout')}}" class="btn btn-primary py-4 px-lg-4 rounded-0 d-none d-lg-block">Logout<i class="fa fa-arrow-right ms-3"></i></a>
-       @endauth
+        
+        <a href="{{route('Customer_profile')}}" class="btn btn-primary py-4 px-lg-4 rounded-0 d-none d-lg-block">Profile<i class="fa fa-arrow-right ms-3"></i></a>
+       
+        @endauth
 
      </div>
  </nav>

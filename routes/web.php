@@ -114,6 +114,11 @@ Route::post('/login',[CustomerController::class,'doLogin'])->name('customer.do.l
 
 Route::get('/logout',[CustomerController::class,'logout'])->name('customer.logout');
 
+//Profile
+
+Route::get('/Customer_profile',[CustomerController::class,'profile'])->name('Customer_profile');
+
+
 //Plants
 
 Route::get('/website_plants',[FrontendPlantController::class,'showlist'])->name('website_plants');
