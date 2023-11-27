@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\Validator;
 class OfferController extends Controller
 {
     public function list(){
-        $Offers_data=Offers::paginate(2);
+        $Offers_data=Offers::paginate(5);
         return view('Backend.Admin.Pages.Offer.list',compact('Offers_data'));
     }
 

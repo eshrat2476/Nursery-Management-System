@@ -11,7 +11,7 @@ class CategoryController extends Controller
 {
     public function list()
     {
-        $Category_data = Category::paginate(2);
+        $Category_data = Category::paginate(5);
         return view('Backend.Admin.Pages.Category.list', compact('Category_data'));
     }
 

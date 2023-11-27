@@ -46,11 +46,23 @@ class UserController extends Controller
     }
 
 
+    //User Profile
+
+    public function profile(){
+    return view('Backend.Admin.Pages.Profile.profile');
+    
+    }
+
+
+
+
+
+
     // USER Entity
 
     public function list()
     {
-        $User_data=User::Paginate(10);
+        $User_data=User::Paginate(5);
 
         return view('Backend.Admin.Pages.User.list',compact('User_data'));
     }

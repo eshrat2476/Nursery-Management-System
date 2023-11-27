@@ -11,7 +11,7 @@ class CareTipsController extends Controller
 {
     public function list()
     {
-        $CareTips_data = CareTips::paginate(2);
+        $CareTips_data = CareTips::paginate(5);
         return view('Backend.Admin.Pages.CareTips.list', compact('CareTips_data'));
     }
 

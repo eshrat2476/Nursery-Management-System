@@ -11,7 +11,7 @@ use Illuminate\Support\Facades\Validator;
 class PlantController extends Controller
 {
     public function list(){
-        $Plant_data=Plant::Paginate(2);
+        $Plant_data=Plant::Paginate(5);
         return view('Backend.Admin.Pages.Plant.list',compact('Plant_data'));
     }
 

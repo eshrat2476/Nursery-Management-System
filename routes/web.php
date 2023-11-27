@@ -44,6 +44,11 @@ Route::group(['middleware'=>'auth'],function(){
 Route::get('/logout',[UserController::class,'logout'])->name('admin_logout');
 
 
+//Profile
+
+Route::get('/profile',[UserController::class,'profile'])->name('profile_view');
+
+
 //Home
 Route::get('/',[HomeController::class,'home'])->name('home');
 
