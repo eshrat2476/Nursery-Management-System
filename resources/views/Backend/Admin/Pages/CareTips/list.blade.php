@@ -12,6 +12,7 @@
       <th scope="col">Id</th>
       <th scope="col">Plant Name</th>
       <th scope="col">Care & Tips</th>
+      <th scope="col">Pesticides</th>
       <th scope="col">Action</th>
     </tr>
   </thead>
@@ -21,6 +22,7 @@
       <th scope="row">{{$CareTips_item->id}}</th>
       <td>{{$CareTips_item->plantname}}</td>
       <td>{{$CareTips_item->caretips}}</td>
+      <td>{{$CareTips_item->pesticides}}</td>
       <td>
         <a class="btn btn-primary btn-sm" href="#">View</a>
         <a class="btn btn-warning btn-sm" href="#">Edit</a>

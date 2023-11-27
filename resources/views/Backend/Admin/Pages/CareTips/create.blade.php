@@ -26,6 +26,20 @@
     </div>
 
 
+
+    <div class="form-group">
+        <label for="enputPlantPesticides">Pesticides</label>
+        <input type="text" name="pesticides" class="form-control" id="enputPlantPesticides" placeholder="Enter Needed Pesticides for Plants">
+        @error('pesticides')
+        <div class="alert alert-danger">{{$message}}</div>
+        @enderror
+    </div>
+
+
+
+
+
+
     <div class="form-check">
         <input type="checkbox" class="form-check-input" id="exampleCheck1">
         <label class="form-check-label" for="exampleCheck1">Check me out</label>

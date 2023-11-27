@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('plantname');
             $table->string('caretips');
+            $table->string('pesticides');
             $table->timestamps();
         });
     }

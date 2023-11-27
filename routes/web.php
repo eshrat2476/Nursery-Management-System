@@ -7,6 +7,8 @@ use App\Http\Controllers\Backend\CategoryController;
 use App\Http\Controllers\Backend\CareTipsController;
 use App\Http\Controllers\Backend\UserController;
 use App\Http\Controllers\Backend\OfferController;
+
+
 use App\Http\Controllers\Frontend\CustomerController;
 use App\Http\Controllers\Frontend\HomeController as FrontendHomeController;
 use App\Http\Controllers\Frontend\PlantController as FrontendPlantController;
@@ -38,7 +40,7 @@ Route::post('/login/post',[UserController::class,'loginpost'])->name('admin_logi
 
 Route::group(['middleware'=>'auth'],function(){
 
-    //Logout
+//Logout
 Route::get('/logout',[UserController::class,'logout'])->name('admin_logout');
 
 

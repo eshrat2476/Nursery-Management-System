@@ -29,6 +29,7 @@ class CareTipsController extends Controller
 
             'plantname' => 'required',
             'caretips' => 'required',
+            'pesticides'=>'required',
         ]);
 
         if ($validate->fails()) {
@@ -39,6 +40,7 @@ class CareTipsController extends Controller
         CareTips::create([
             'plantname' => $request->plantname,
             'caretips' => $request->caretips,
+            'pesticides'=>$request->pesticides,
         ]);
 
         return redirect(route('admin_care_tips'));
