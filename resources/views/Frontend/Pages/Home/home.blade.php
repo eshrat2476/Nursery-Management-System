@@ -56,9 +56,15 @@
 
 <!-- chikon box end -->
 
-@include('Frontend.Pages.Plants.Plants')
-
-
 
 
 @endsection
+
+@section('content')
+
+
+@include('Frontend.Pages.Plants.Plants')
+
+
+@endsection
+

@@ -1,9 +1,3 @@
- <!-- Spinner Start -->
- <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-     <div class="spinner-border text-primary" role="status" style="width: 3rem; height: 3rem;"></div>
- </div>
- <!-- Spinner End -->
-
 
  <!-- Topbar Start -->
  <div class="container-fluid bg-dark text-light px-0 py-2">
@@ -57,7 +51,7 @@
 
      <div class="collapse navbar-collapse" id="navbarCollapse">
          <div class="navbar-nav ms-auto p-4 p-lg-0">
-             <a href="index.html" class="nav-item nav-link active">Home</a>
+             <a href="{{route('Home')}}" class="nav-item nav-link active">Home</a>
              <a href="{{route('website_plants')}}" class="nav-item nav-link">Plants</a>
 
              <div class="nav-item dropdown">

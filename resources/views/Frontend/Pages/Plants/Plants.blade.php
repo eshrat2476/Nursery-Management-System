@@ -3,6 +3,10 @@
 @section('content')
 
 
+<h1>Our Plants</h1>
+<span>gujgj</span>
+
+
 <div class="container">
 
     <style>
