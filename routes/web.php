@@ -7,8 +7,7 @@ use App\Http\Controllers\Backend\CategoryController;
 use App\Http\Controllers\Backend\CareTipsController;
 use App\Http\Controllers\Backend\UserController;
 use App\Http\Controllers\Backend\OfferController;
-
-
+use App\Http\Controllers\Frontend\CartController;
 use App\Http\Controllers\Frontend\CustomerController;
 use App\Http\Controllers\Frontend\HomeController as FrontendHomeController;
 use App\Http\Controllers\Frontend\PlantController as FrontendPlantController;
@@ -66,11 +65,14 @@ Route::get('/plant/delete/{id}',[PlantController::class, 'delete'])->name('plant
 
 Route::put('/plant/update/{id}',[PlantController::class, 'update'])->name('plant_update');
 
-
-
-
 Route::get('/plants-create',[PlantController::class,'create'])->name('admin_plants_create');
+
 Route::post('/plants-store',[PlantController::class,'store'])->name('admin_plants_store');
+
+
+
+
+
 
 //Category
 
@@ -135,3 +137,11 @@ Route::get('/Customer_profile',[CustomerController::class,'profile'])->name('Cus
 //Plants
 
 Route::get('/website_plants',[FrontendPlantController::class,'showlist'])->name('website_plants');
+
+
+//Cart
+
+Route::get('/cart-view',[CartController::class,'viewCart'])->name('cart_view');
+
+Route::get('/add-to-cart/{Plant_item_id}',[CartController::class,'addToCart'])->name('add_toCart');
+

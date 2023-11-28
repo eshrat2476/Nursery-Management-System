@@ -22,8 +22,23 @@
          <div class="col-lg-5 px-5 text-end">
              <div class="h-100 d-inline-flex align-items-center mx-n2">
 
-                 <span>Follow Us:</span>
-                 <a class="btn btn-link text-light" href=""><i class="fab fa-facebook-f"></i></a>
+
+
+                 <a class="btn btn-link text-light" href="{{route('cart_view')}}">
+                     <i class="bi-cart-fill me-1"></i>
+                     Cart
+                     <span class="badge bg-dark text-white ms-1 rounded-pill">
+                     @if(session()->has('vcart'))
+                                    {{ count(session()->get('vcart')) }}
+                                @else
+                                0
+                                @endif
+                     </span>
+                 </a>
+
+
+
+                 <a class=" btn btn-link text-light" href=""><i class="fab fa-facebook-f"></i></a>
                  <a class="btn btn-link text-light" href=""><i class="fab fa-instagram"></i></a>
                  <a class="btn btn-link text-light" href=""><i class="fab fa-whatsapp"></i></a>
 
@@ -64,15 +79,15 @@
          @guest
          <a href="{{route('customer.registration')}}" class="btn btn-success py-4 px-lg-4 rounded-0 d-none d-lg-block">Registration</a>
 
-        <a href="{{route('customer.login')}}" class="btn btn-primary py-4 px-lg-4 rounded-0 d-none d-lg-block">LogIn<i class="fa fa-arrow-right ms-3"></i></a>
-        @endguest
+         <a href="{{route('customer.login')}}" class="btn btn-primary py-4 px-lg-4 rounded-0 d-none d-lg-block">LogIn<i class="fa fa-arrow-right ms-3"></i></a>
+         @endguest
 
-        @auth
-        <a href="{{route('customer.logout')}}" class="btn btn-primary py-4 px-lg-4 rounded-0 d-none d-lg-block">Logout<i class="fa fa-arrow-right ms-3"></i></a>
-        
-        <a href="{{route('Customer_profile')}}" class="btn btn-primary py-4 px-lg-4 rounded-0 d-none d-lg-block">Profile<i class="fa fa-arrow-right ms-3"></i></a>
-       
-        @endauth
+         @auth
+         <a href="{{route('customer.logout')}}" class="btn btn-primary py-4 px-lg-4 rounded-0 d-none d-lg-block">Logout<i class="fa fa-arrow-right ms-3"></i></a>
+
+         <a href="{{route('Customer_profile')}}" class="btn btn-primary py-4 px-lg-4 rounded-0 d-none d-lg-block">Profile<i class="fa fa-arrow-right ms-3"></i></a>
+
+         @endauth
 
      </div>
  </nav>
