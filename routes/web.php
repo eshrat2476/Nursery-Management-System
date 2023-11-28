@@ -7,6 +7,8 @@ use App\Http\Controllers\Backend\CategoryController;
 use App\Http\Controllers\Backend\CareTipsController;
 use App\Http\Controllers\Backend\UserController;
 use App\Http\Controllers\Backend\OfferController;
+
+
 use App\Http\Controllers\Frontend\CartController;
 use App\Http\Controllers\Frontend\CustomerController;
 use App\Http\Controllers\Frontend\HomeController as FrontendHomeController;

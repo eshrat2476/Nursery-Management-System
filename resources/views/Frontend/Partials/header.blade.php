@@ -16,7 +16,7 @@
 
              <div class="h-100 d-inline-flex align-items-center">
                  <span class="far fa-envelope me-2"></span>
-                 <span>flora@example.com</span>
+                 <span>toru@example.com</span>
              </div>
          </div>
          <div class="col-lg-5 px-5 text-end">
@@ -36,11 +36,8 @@
                      </span>
                  </a>
 
-
-
-                 <a class=" btn btn-link text-light" href=""><i class="fab fa-facebook-f"></i></a>
-                 <a class="btn btn-link text-light" href=""><i class="fab fa-instagram"></i></a>
-                 <a class="btn btn-link text-light" href=""><i class="fab fa-whatsapp"></i></a>
+                 <a class=" btn btn-link text-light" href="https://www.facebook.com/profile.php?id=61553547762155"><i class="fab fa-facebook-f"></i></a>
+                 <a class="btn btn-link text-light" href="https://wa.me/<01974627106>"><i class="fab fa-whatsapp"></i></a>
 
              </div>
          </div>
@@ -51,7 +48,7 @@
  <!-- Navbar Start -->
  <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top p-0">
      <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
-         <h1 class="m-0">Flora</h1>
+         <h1 class="m-0">তরু</h1>
      </a>
 
      <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
