@@ -3,25 +3,22 @@
         <div class="container py-5">
             <div class="row g-5">
                 <div class="col-lg-3 col-md-6">
-                    <h4 class="text-white mb-4">Our Office</h4>
-                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>1216, Mirpur Dhaka, Bangladesh</p>
-                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>01974627106</p>
-                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>flora@example.com</p>
+                    <h4 class="text-white mb-4">𝒪𝓊𝓇 𝒪𝒻𝒻𝒾𝒸𝑒</h4>
+                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>𝟣𝟤𝟣𝟨, 𝑀𝒾𝓇𝓅𝓊𝓇 𝒟𝒽𝒶𝓀𝒶, 𝐵𝒶𝓃𝑔𝓁𝒶𝒹𝑒𝓈𝒽</p>
+                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>𝟶𝟷𝟿𝟽𝟺𝟼𝟸𝟽𝟷𝟶𝟼</p>
+                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>𝓉𝑜𝓇𝓊@𝑒𝓍𝒶𝓂𝓅𝓁𝑒.𝒸𝑜𝓂</p>
                     <div class="d-flex pt-2">
-                        <a class="btn btn-square btn-outline-light rounded-circle me-2" href=""><i class="fab fa-twitter"></i></a>
                         <a class="btn btn-square btn-outline-light rounded-circle me-2" href=""><i class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-square btn-outline-light rounded-circle me-2" href=""><i class="fab fa-youtube"></i></a>
-                        <a class="btn btn-square btn-outline-light rounded-circle me-2" href=""><i class="fab fa-linkedin-in"></i></a>
+                        <a class="btn btn-square btn-outline-light rounded-circle me-2" href=""><i class="fab fa-whatsapp"></i></a>
+
                     </div>
                 </div>
                 
                 <div class="col-lg-3 col-md-6">
-                    <h4 class="text-white mb-4">Quick Links</h4>
-                    <a class="btn btn-link" href="">About Us</a>
-                    <a class="btn btn-link" href="">Contact Us</a>
-                    <a class="btn btn-link" href="">Our Services</a>
-                    <a class="btn btn-link" href="">Terms & Condition</a>
-                    <a class="btn btn-link" href="">Support</a>
+                    <h4 class="text-white mb-4">𝒬𝓊𝒾𝒸𝓀 𝐿𝒾𝓃𝓀𝓈</h4>
+                    <a class="btn btn-link" href="">𝒞𝑜𝓃𝓉𝒶𝒸𝓉 𝒰𝓈</a>
+                    <a class="btn btn-link" href="">𝒪𝓊𝓇 𝒪𝒻𝒻𝑒𝓇𝓈</a>
+                    
                 </div>
             </div>
         </div>
@@ -34,11 +31,11 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                    &copy; <a class="border-bottom" href="#">Eshrat Ara</a>, All Right Reserved.
+                    &copy; <a class="border-bottom" href="#">𝙴𝚜𝚑𝚛𝚊𝚝 𝙰𝚛𝚊</a>, All Right Reserved.
                 </div>
                 <div class="col-md-6 text-center text-md-end">
                     <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-                    Designed By <a class="border-bottom" href="https://htmlcodex.com">Eshrat Ara</a> 
+                    Designed By <a class="border-bottom" href="https://htmlcodex.com">𝐸𝓈𝒽𝓇𝒶𝓉 𝒜𝓇𝒶</a> 
             </div>
         </div>
     </div>

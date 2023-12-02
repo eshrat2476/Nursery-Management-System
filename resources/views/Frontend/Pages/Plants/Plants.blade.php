@@ -3,8 +3,14 @@
 @section('content')
 
 
-<h1>Our Plants</h1>
-<span>gujgj</span>
+
+<div class="container">
+
+<h1>𓂀𝕆𝕦𝕣 ℙ𝕝𝕒𝕟𝕥𝕤𓂀</h1>
+<span>𝑀𝑜𝓇𝑒 𝒫𝓁𝒶𝓃𝓉𝓈 𝐿𝑒𝓈𝓈 𝒫𝓇𝑜𝒷𝓁𝑒𝓂𝓈</span>
+
+</div>
+
 
 
 <div class="container">
@@ -77,15 +83,6 @@
 
     @endforeach
 
-
-
 </div>
-
-
-
-
-
-
-
 
 @endsection
