@@ -3,11 +3,10 @@
 @section('content')
 
 
-
 <div class="container">
 
-<h1>𓂀𝕆𝕦𝕣 ℙ𝕝𝕒𝕟𝕥𝕤𓂀</h1>
-<span>𝑀𝑜𝓇𝑒 𝒫𝓁𝒶𝓃𝓉𝓈 𝐿𝑒𝓈𝓈 𝒫𝓇𝑜𝒷𝓁𝑒𝓂𝓈</span>
+    <h1>𓂀𝕆𝕦𝕣 ℙ𝕝𝕒𝕟𝕥𝕤𓂀</h1>
+    <span>𝑀𝑜𝓇𝑒 𝒫𝓁𝒶𝓃𝓉𝓈 𝐿𝑒𝓈𝓈 𝒫𝓇𝑜𝒷𝓁𝑒𝓂𝓈</span>
 
 </div>
 
@@ -72,7 +71,7 @@
                 <div class='cvp'>
 
                     <h5 class="card-title font-weight-bold">{{$Plant_item->plantname}}</h5>
-                    <p class="card-text">{{$Plant_item->plantprice}}</p>
+                    <p class="card-text">Tk {{$Plant_item->plantprice}}  .BDT</p>
                     <a href="#" class="btn details px-auto">view details</a><br />
                     <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="{{route('add_toCart',$Plant_item->id)}}">Add to cart</a></div>
                 </div>
