@@ -116,7 +116,7 @@ Route::post('/users-store',[UserController::class,'store'])->name('admin_user_st
 
 Route::get('/',[FrontendHomeController::class,'home'])->name('Home');
 
-Route::get('/search-product',[FrontendHomeController::class,'search'])->name('product_search');
+Route::get('/search-product',[FrontendHomeController::class,'search'])->name('Plant_search');
 
 
 //Registration

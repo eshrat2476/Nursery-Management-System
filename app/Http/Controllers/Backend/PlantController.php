@@ -9,10 +9,13 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 
 class PlantController extends Controller
+
+
 {
     public function list()
     {
-        $Plant_data = Plant::Paginate(5);
+        $Plant_data = Plant::with('category')->Paginate(5);
+        // dd($Plant_data);
         return view('Backend.Admin.Pages.Plant.list', compact('Plant_data'));
     }
 
@@ -65,7 +68,7 @@ class PlantController extends Controller
                 'plantdescription' => $request->plantdescription
             ]);
 
-            notify()->success('Product updated successfully.');
+            notify()->success('Plant updated successfully.');
             return redirect()->back();
         }
     }
@@ -87,7 +90,7 @@ class PlantController extends Controller
             'plantname' => 'required',
             'plantprice' => 'required',
             'plantimage' => 'required',
-            'category_name' => 'required',
+            'category_id' => 'required',                 //input field name tarpor required
             'plantdescription' => 'required'
         ]);
 
@@ -104,12 +107,13 @@ class PlantController extends Controller
         }
 
 
+
         Plant::create([
             'plantname' => $request->plantname,
             'plantprice' => $request->plantprice,
-            'plantimage' => $file_name,
-            'plantcategory' => $request->category_name,
-            'plantdescription' => $request->plantdescription,
+            'plantimage' => $file_name,                           //column name=>form input name
+            'plantcategory' => $request->category_id,
+            'plantdescription' => $request->plantdescription,           
         ]);
         return redirect(route('admin_plants'));
     }

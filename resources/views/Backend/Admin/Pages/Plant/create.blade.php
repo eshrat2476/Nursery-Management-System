@@ -38,15 +38,20 @@
 
   <div class="form-group">
     <label for="selectplantcategory">Plant Category</label>
-    <select class="form-control" name="category_name" id="">
-      @foreach($plant_category as $plant_categoryitem)
-      <option value="{{$plant_categoryitem->categoryname}}">{{$plant_categoryitem->categoryname}}</option>
-      @endforeach
+    <select class="form-control" name="category_id" id="">
+      <option value="">select One</option>
+      @forelse($plant_category as $plant_categoryitem)
+      <option value="{{$plant_categoryitem->id}}">{{$plant_categoryitem->categoryname}}</option>
+      @empty
+      <option value="">Not found</option>
+      @endforelse
     </select>
-    @error('category_name')
+    @error('category_id')
     <div class="alert alert-danger">{{$message}}</div>
     @enderror
   </div>
+
+
 
 
   <div class="form-group">

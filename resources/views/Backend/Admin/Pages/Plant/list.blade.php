@@ -31,12 +31,15 @@
       <td>
         <img style="height:60px; width:60px;" src="{{url('uploads/',$Plant_item->plantimage)}}" alt="plantimage">
       </td>
-      <td>{{$Plant_item->plantcategory}}</td>
+      <td>{{$Plant_item->category->categoryname}}</td>
       <td>{{$Plant_item->plantdescription}}</td>
       <td>
-        <a class="btn btn-primary" href="">View</a>
-        <a class="btn btn-primary" href="{{route('plant_edit',$Plant_item->id)}}">Edit</a>
-        <a class="btn btn-danger" href="{{route('plant_delete',$Plant_item->id)}}">Delete</a>
+
+
+      <a class="btn btn-primary btn-sm"  href="#">View</a>
+      <a class="btn btn-warning btn-sm"  href="{{route('plant_edit',$Plant_item->id)}}">Edit</a>
+      <a class="btn btn-danger btn-sm"  href="{{route('plant_delete',$Plant_item->id)}}">Delete</a>
+        
 
       </td>
     </tr>
