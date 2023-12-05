@@ -27,9 +27,9 @@
       <td>{{$Category_item->categoryname}}</td>
       <td>{{$Category_item->categorydescription}}</td>
       <td>
-      <a class="btn btn-primary btn-sm"  href="#">View</a>
-      <a class="btn btn-warning btn-sm"  href="#">Edit</a>
-      <a class="btn btn-danger btn-sm"  href="#">Delete</a>
+        <a class="btn btn-primary btn-sm" href="{{route('categories_view',$Category_item->id)}}">View</a>
+        <a class="btn btn-warning btn-sm" href="{{route('categories_edit',$Category_item->id)}}">Edit</a>
+        <a class="btn btn-danger btn-sm" href="{{route('categories_delete',$Category_item->id)}}">Delete</a>
 
       </td>
     </tr>

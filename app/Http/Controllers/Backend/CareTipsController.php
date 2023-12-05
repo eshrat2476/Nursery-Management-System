@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Backend;
 
 use App\Http\Controllers\Controller;
 use App\Models\CareTips;
+use App\Models\Plant;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 
@@ -14,6 +15,66 @@ class CareTipsController extends Controller
         $CareTips_data = CareTips::paginate(5);
         return view('Backend.Admin.Pages.CareTips.list', compact('CareTips_data'));
     }
+
+
+//View
+
+public function view($id)
+{
+    $Plant_item = Plant::all();
+
+    $CareTips_data = CareTips::find($id);
+
+    return view('Backend.Admin.Pages.CareTips.view', compact('CareTips_data','Plant_item'));
+}
+
+
+//Delete
+
+public function delete($id)
+{
+    $CareTips_data = CareTips::find($id);
+    if ($CareTips_data) {
+        $CareTips_data->delete();
+    }
+
+    notify()->success('Category Deleted Successfully.');
+    return redirect()->back();
+}
+
+
+//Edit
+
+
+public function edit($id)
+{
+    $Plant_item = Plant::all();
+
+    $CareTips_data = CareTips::find($id);
+
+    return view('Backend.Admin.Pages.CareTips.edit', compact('CareTips_data','Plant_item'));
+}
+
+//update
+
+public function update(Request $request, $id)
+{
+    $CareTips_data = CareTips::find($id);
+
+    if ($CareTips_data) {
+
+
+        $CareTips_data->update([
+
+            'plantname' => $request->plantname,
+            'caretips' => $request->caretips,
+            'pesticides'=>$request->pesticides,
+        ]);
+
+        notify()->success('Plant updated successfully.');
+        return redirect()->back();
+    }
+}
 
 
 

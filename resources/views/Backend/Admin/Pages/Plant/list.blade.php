@@ -36,7 +36,7 @@
       <td>
 
 
-      <a class="btn btn-primary btn-sm"  href="#">View</a>
+      <a class="btn btn-primary btn-sm"  href="{{route('plant_view',$Plant_item->id)}}">View</a>
       <a class="btn btn-warning btn-sm"  href="{{route('plant_edit',$Plant_item->id)}}">Edit</a>
       <a class="btn btn-danger btn-sm"  href="{{route('plant_delete',$Plant_item->id)}}">Delete</a>
         

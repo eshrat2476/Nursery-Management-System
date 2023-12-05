@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Backend;
 
 use App\Http\Controllers\Controller;
 use App\Models\Category;
+use App\Models\Plant;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 
@@ -15,10 +16,79 @@ class CategoryController extends Controller
         return view('Backend.Admin.Pages.Category.list', compact('Category_data'));
     }
 
+
+
+    //View
+
+    public function view($id)
+    {
+
+        $Plant_item = Plant::all();
+
+        $Category_data = Category::find($id);
+
+        return view('Backend.Admin.Pages.Category.view', compact('Category_data', 'Plant_item'));
+    }
+
+
+
+    //Delete
+
+    public function delete($id)
+    {
+        $Category_data = Category::find($id);
+        if ($Category_data) {
+            $Category_data->delete();
+        }
+
+        notify()->success('Category Deleted Successfully.');
+        return redirect()->back();
+    }
+
+
+    //Edit
+
+
+    public function edit($id)
+    {
+        $Plant_item = Plant::all();
+
+        $Category_data = Category::find($id);
+
+        return view('Backend.Admin.Pages.Category.edit', compact('Category_data', 'Plant_item'));
+    }
+
+    //update
+
+    public function update(Request $request, $id)
+    {
+        $Category_data = Category::find($id);
+
+        if ($Category_data) {
+
+
+            $Category_data->update([
+
+                'categoryname' => $request->categoryname,
+                'categorydescription' => $request->categorydescription,
+            ]);
+
+            notify()->success('Plant updated successfully.');
+            return redirect()->back();
+        }
+    }
+
+
+
+
     public function create()
     {
         return view('Backend.Admin.Pages.Category.create');
     }
+
+
+
+
 
     public function store(Request $request)
     {

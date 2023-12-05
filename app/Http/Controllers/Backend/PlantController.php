@@ -19,7 +19,26 @@ class PlantController extends Controller
         return view('Backend.Admin.Pages.Plant.list', compact('Plant_data'));
     }
 
-    //Delete//
+
+
+
+    //View
+
+    public function view($id)
+    {
+
+        $Plant_item = Plant::find($id);
+
+        $Category_data = Category::all();
+
+        return view('Backend.Admin.Pages.Plant.view', compact('Category_data', 'Plant_item'));
+    }
+
+
+
+
+
+    //Delete
 
     public function delete($id)
     {
@@ -52,7 +71,7 @@ class PlantController extends Controller
 
         if ($Plant_item) {
 
-            $fileName = $Plant_item->plantimage;
+            $file_name = $Plant_item->plantimage;
             if ($request->hasFile('plantimage')) {
                 $file = $request->file('plantimage');
                 $file_name = date('YmdHis') . '.' . $file->getClientOriginalExtension();
@@ -64,7 +83,7 @@ class PlantController extends Controller
                 'plantname' => $request->plantname,
                 'plantprice' => $request->plantprice,
                 'plantimage' => $file_name,
-                'plantcategory' => $request->category_name,
+                // 'plantcategory' => $request->categoryname,
                 'plantdescription' => $request->plantdescription
             ]);
 
@@ -113,7 +132,7 @@ class PlantController extends Controller
             'plantprice' => $request->plantprice,
             'plantimage' => $file_name,                           //column name=>form input name
             'plantcategory' => $request->category_id,
-            'plantdescription' => $request->plantdescription,           
+            'plantdescription' => $request->plantdescription,
         ]);
         return redirect(route('admin_plants'));
     }

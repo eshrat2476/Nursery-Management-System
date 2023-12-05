@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Backend;
 
 use App\Http\Controllers\Controller;
 use App\Models\Offers;
+use App\Models\Plant;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 
@@ -13,6 +14,65 @@ class OfferController extends Controller
         $Offers_data=Offers::paginate(5);
         return view('Backend.Admin.Pages.Offer.list',compact('Offers_data'));
     }
+
+//View
+
+public function view($id)
+{
+    $Plant_item = Plant::all();
+
+    $Offers_data = Offers::find($id);
+
+    return view('Backend.Admin.Pages.Offer.view', compact('Offers_data','Plant_item'));
+}
+
+
+//Delete
+
+public function delete($id)
+{
+    $Offers_data = Offers::find($id);
+    if ( $Offers_data) {
+        $Offers_data->delete();
+    }
+
+    notify()->success('Offer Deleted Successfully.');
+    return redirect()->back();
+}
+
+//Edit
+
+
+public function edit($id)
+{
+    $Plant_item = Plant::all();
+
+    $Offers_data = Offers::find($id);
+
+    return view('Backend.Admin.Pages.Offer.edit', compact('Offers_data','Plant_item'));
+}
+
+//update
+
+public function update(Request $request, $id)
+{
+    $Offers_data = Offers::find($id);
+
+    if ($Offers_data) {
+
+        $Offers_data->update([
+
+            'plantname'=>$request->plantname,
+            'originalprice'=>$request->originalprice,
+            'offerprice'=>$request->offerprice,
+            'offerstatus'=>$request->offerstatus,
+        ]);
+
+        notify()->success('Offer updated successfully.');
+        return redirect()->back();
+    }
+}
+
 
 
     public function create(){

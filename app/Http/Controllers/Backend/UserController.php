@@ -68,6 +68,69 @@ class UserController extends Controller
     }
 
 
+
+    //View
+
+public function view($id)
+{
+
+    $User_data = User::find($id);
+
+    return view('Backend.Admin.Pages.User.view', compact('User_data'));
+}
+
+
+//Delete
+
+public function delete($id)
+{
+    $User_data = User::find($id);
+    if ( $User_data) {
+        $User_data->delete();
+    }
+
+    notify()->success('User Deleted Successfully.');
+    return redirect()->back();
+}
+
+
+//Edit
+
+
+public function edit($id)
+{
+
+    $User_data = User::find($id);
+
+    return view('Backend.Admin.Pages.User.edit', compact('User_data'));
+}
+
+//update
+
+public function update(Request $request, $id)
+{
+    $User_data = User::find($id);
+
+    if ($User_data) {
+
+        $User_data->update([
+
+            'name'=>$request->name,
+            'email'=>$request->email,
+            'role'=>$request->role,
+            'password'=>$request->password,
+        ]);
+
+        notify()->success('User updated successfully.');
+        return redirect()->back();
+    }
+}
+
+
+
+
+
+
     public function create()
     {
 
