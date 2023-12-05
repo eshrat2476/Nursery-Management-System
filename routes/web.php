@@ -202,9 +202,8 @@ Route::get('/add-to-cart/{Plant_item_id}', [CartController::class, 'addToCart'])
 
 //Checkout
 
-Route::get('/checkout',[CartController::class,'checkout'])->name('checkout');
+Route::get('/checkout', [CartController::class, 'checkout'])->name('checkout');
 
 //Order
 
-Route::post('/order-place',[FrontendOrderController::class, 'orderPlace'])->name('order_place');
-
+Route::post('/order-place', [FrontendOrderController::class, 'orderPlace'])->name('order_place');
