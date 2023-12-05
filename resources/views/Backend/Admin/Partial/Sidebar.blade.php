@@ -42,6 +42,24 @@
     </li><!-- End CARE & TIPS Nav -->
 
 
+    <li class="nav-item">
+      <a class="nav-link collapsed" href="{{route('admin_offers')}}">
+        <i class="fa-solid fa-shield-heart fa-beat"></i>
+        <span>OFFERS</span>
+      </a>
+
+    </li><!-- End OFFERS Nav -->
+
+
+    <li class="nav-item">
+      <a class="nav-link collapsed" href="{{route('admin_orders')}}">
+      <i class="fa-solid fa-clipboard fa-spin fa-lg"></i>
+               <span>ORDERS</span>
+      </a>
+
+    </li><!-- End ORDERS Nav -->
+
+
 
 
     <li class="nav-item">
@@ -54,14 +72,6 @@
 
 
 
-
-    <li class="nav-item">
-      <a class="nav-link collapsed" href="{{route('admin_offers')}}">
-        <i class="fa-solid fa-shield-heart fa-beat"></i>
-        <span>OFFERS</span>
-      </a>
-
-    </li><!-- End OFFERS Nav -->
 
 
 

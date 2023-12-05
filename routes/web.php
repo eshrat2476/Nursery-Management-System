@@ -8,10 +8,12 @@ use App\Http\Controllers\Backend\CareTipsController;
 use App\Http\Controllers\Backend\UserController;
 use App\Http\Controllers\Backend\OfferController;
 use App\Http\Controllers\Backend\OrderController;
+
 use App\Http\Controllers\Frontend\CartController;
 use App\Http\Controllers\Frontend\CustomerController;
 use App\Http\Controllers\Frontend\HomeController as FrontendHomeController;
 use App\Http\Controllers\Frontend\PlantController as FrontendPlantController;
+use App\Http\Controllers\Frontend\OrderController as FrontendOrderController;
 
 
 /*
@@ -110,6 +112,7 @@ Route::group(['prefix' => 'admin'], function () {
 
 
         //Offers
+
         Route::get('/offers', [OfferController::class, 'list'])->name('admin_offers');
 
         Route::get('/offers/view/{id}', [OfferController::class, 'view'])->name('offers_view');
@@ -123,6 +126,15 @@ Route::group(['prefix' => 'admin'], function () {
         Route::get('/offers-create', [OfferController::class, 'create'])->name('admin_offers_create');
 
         Route::post('/offers-store', [OfferController::class, 'store'])->name('admin_offers_store');
+
+
+
+        //Orders
+
+        Route::get('/orders', [OrderController::class, 'list'])->name('admin_orders');
+
+
+
 
 
         //Users
@@ -186,3 +198,13 @@ Route::get('/website_plants', [FrontendPlantController::class, 'showlist'])->nam
 Route::get('/cart-view', [CartController::class, 'viewCart'])->name('cart_view');
 
 Route::get('/add-to-cart/{Plant_item_id}', [CartController::class, 'addToCart'])->name('add_toCart');
+
+
+//Checkout
+
+Route::get('/checkout',[CartController::class,'checkout'])->name('checkout');
+
+//Order
+
+Route::post('/order-place',[FrontendOrderController::class, 'orderPlace'])->name('order_place');
+

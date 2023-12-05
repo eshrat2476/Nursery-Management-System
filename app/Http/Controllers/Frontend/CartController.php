@@ -68,5 +68,13 @@ class CartController extends Controller
 
         return view('Frontend.Pages.Cart');
     }
+
+
+    public function checkout()
+    {
+        return view('Frontend.Pages.Checkout.checkout');
+    }
+
+
 }
 
