@@ -11,6 +11,7 @@ use App\Http\Controllers\Backend\OrderController;
 
 use App\Http\Controllers\Frontend\CartController;
 use App\Http\Controllers\Frontend\CustomerController;
+use App\Http\Controllers\Frontend\ContactController;
 use App\Http\Controllers\Frontend\HomeController as FrontendHomeController;
 use App\Http\Controllers\Frontend\PlantController as FrontendPlantController;
 use App\Http\Controllers\Frontend\OrderController as FrontendOrderController;
@@ -191,6 +192,11 @@ Route::get('/Customer_profile', [CustomerController::class, 'profile'])->name('C
 //Plants
 
 Route::get('/website_plants', [FrontendPlantController::class, 'showlist'])->name('website_plants');
+
+
+//Contact
+
+Route::get('/contact', [ContactController::class, 'contact'])->name('contact');
 
 
 //Cart

@@ -65,6 +65,7 @@
 
 @include('Frontend.Pages.Plants.Plants')
 
-
 @endsection
+
+
 

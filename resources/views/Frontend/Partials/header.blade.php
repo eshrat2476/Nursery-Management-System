@@ -74,7 +74,7 @@
             </div>
             <a href="project.html" class="nav-item nav-link">𝒪𝒻𝒻𝑒𝓇𝓈</a>
 
-            <a href="contact.html" class="nav-item nav-link">𝒞𝑜𝓃𝓉𝒶𝒸𝓉</a>
+            <a href="{{route('contact')}}" class="nav-item nav-link">𝒞𝑜𝓃𝓉𝒶𝒸𝓉</a>
         </div>
         @guest
         <a href="{{route('customer.registration')}}" class="btn btn-success py-4 px-lg-4 rounded-0 d-none d-lg-block">𝑅𝑒𝑔𝒾𝓈𝓉𝓇𝒶𝓉𝒾𝑜𝓃</a>
