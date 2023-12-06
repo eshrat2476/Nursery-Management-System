@@ -3,7 +3,6 @@
 @section('content')
 
 
-
 <div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeIn;">
     <div class="container text-center py-5">
         <h1 class="display-3 text-white mb-4  slideInDown">𓂀𝕆𝕦𝕣 ℙ𝕝𝕒𝕟𝕥𝕤𓂀</h1>
@@ -17,7 +16,6 @@
         </nav>
     </div>
 </div>
-
 
 
 <div class="container">
@@ -80,16 +78,16 @@
 
                     <h5 class="card-title font-weight-bold">{{$Plant_item->plantname}}</h5>
                     <!-- Product reviews-->
-                    <div class="d-flex justify-content-center small text-warning mb-2">
-                        <div class="bi-star-fill"></div>
-                        <div class="bi-star-fill"></div>
-                        <div class="bi-star-fill"></div>
-                        <div class="bi-star-fill"></div>
-                        <div class="bi-star-fill"></div>
-                    </div>
+                        <div class="d-flex justify-content-center small text-warning mb-2">
+                            <div class="bi-star-fill"></div>
+                            <div class="bi-star-fill"></div>
+                            <div class="bi-star-fill"></div>
+                            <div class="bi-star-fill"></div>
+                            <div class="bi-star-fill"></div>
+                        </div>
 
 
-                    <p class="card-text">Tk {{$Plant_item->plantprice}} .BDT</p>
+                    <p class="card-text">Tk {{$Plant_item->plantprice}}  .BDT</p>
                     <a href="#" class="btn details px-auto">view details</a><br />
                     <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="{{route('add_toCart',$Plant_item->id)}}">Add to cart</a></div>
                 </div>
