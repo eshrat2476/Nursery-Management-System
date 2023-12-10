@@ -202,7 +202,7 @@ Route::get('/contact', [ContactController::class, 'contact'])->name('contact');
 //Cart
 
 Route::get('/cart-view', [CartController::class, 'viewCart'])->name('cart_view');
-
+Route::get('/cart-fresh', [CartController::class, 'fresh_cart'])->name('Fresh_Cart');
 Route::get('/add-to-cart/{Plant_item_id}', [CartController::class, 'addToCart'])->name('add_toCart');
 
 

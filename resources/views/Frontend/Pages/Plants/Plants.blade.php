@@ -88,7 +88,6 @@
 
 
                     <p class="card-text">Tk {{$Plant_item->plantprice}}  .BDT</p>
-                    <a href="#" class="btn details px-auto">view details</a><br />
                     <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="{{route('add_toCart',$Plant_item->id)}}">Add to cart</a></div>
                 </div>
             </div>

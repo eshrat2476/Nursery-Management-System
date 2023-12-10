@@ -17,7 +17,7 @@ class OrderController extends Controller
 
         // dd($request->all());
 
-        $cart = session()->get('vcart');
+        $cart = session()->get('virtual_cart');
 
         //create order
         $order = Order::create([
@@ -43,7 +43,7 @@ class OrderController extends Controller
             ]);
         }
 
-        session()->forget('vcart');
+        session()->forget('virtual_cart');
         notify()->success('Order placed success.');
         return redirect()->back();
     }

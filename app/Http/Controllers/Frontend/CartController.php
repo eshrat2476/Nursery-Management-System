@@ -8,63 +8,63 @@ use Illuminate\Http\Request;
 
 class CartController extends Controller
 {
-    public function viewCart(){
+    public function viewCart()
+    {
         return view('Frontend.Pages.Cart.Cart');
+    }
+
+
+    public function fresh_cart(){
+        $cart=session()->get('virtual_cart');
+        if($cart){
+            session()->forget('virtual_cart');
+        }
+        return redirect()->back();
     }
 
 
     public function addToCart($pId)
     {
-        $plant=Plant::find($pId);
+        // dd($pId);
+        $plant = Plant::find($pId);
+        // dd($plant);
+        $cart = session()->get('virtual_cart');
+        if ($cart) {
+            if (array_key_exists($pId, $cart)) {
+                $cart[$pId]['quantity'] = $cart[$pId]['quantity'] + 1;
+                $cart[$pId]['subtotal'] = $cart[$pId]['price'] * $cart[$pId]['quantity'];
 
-        $cart=session()->get('vcart');
-        if($cart){//not empty
+                notify()->success('Quantity Update.');
+                session()->put('virtual_cart', $cart);
+                return redirect()->back();
+            } else {
+                $cart[$pId] = [
+                    'id' => $pId,
+                    'photo' => $plant->plantimage,
+                    'name' => $plant->plantname,
+                    'quantity' => 1,
+                    'price' => $plant->plantprice,
+                    'subtotal' => 1 * $plant->plantprice,
+                ];
 
-            if(array_key_exists($pId,$cart)){//yes
-                //qty update
-                $cart[$pId]['quantity']=$cart[$pId]['quantity'] + 1;
-                $cart[$pId]['subtotal']=$cart[$pId]['quantity'] * $cart[$pId]['price'];
-
-            session()->put('vcart',$cart);
-            notify()->success('Quantity updated.');
-            return redirect()->back();
-
-
-            }else{//no
-                //add to cart
-                $cart[$pId]=[
-                    'id'=>$pId,
-                    'name'=>$plant->name,
-                    'price'=>$plant->price,
-                    'quantity'=>1,
-                    'subtotal'=>1 * $plant->price,
+                notify()->success('Added to new card.');
+                session()->put('virtual_cart', $cart);
+                return redirect()->back();
+            };
+        } else {
+            $new_cart[$pId] = [
+                'id' => $pId,
+                'photo' => $plant->plantimage,
+                'name' => $plant->plantname,
+                'quantity' => 1,
+                'price' => $plant->plantprice,
+                'subtotal' => 1 * $plant->plantprice,
             ];
 
-            session()->put('vcart',$cart);
-            notify()->success('Product added to cart successfully.');
+            notify()->success('First Added to new card.');
+            session()->put('virtual_cart', $new_cart);
             return redirect()->back();
-
-            }
-
-            return redirect()->back();
-
-        }else{//empty
-            //add to cart
-            $newCart[$pId]=[
-                    'id'=>$pId,
-                    'name'=>$plant->name,
-                    'price'=>$plant->price,
-                    'quantity'=>1,
-                    'subtotal'=>1 * $plant->price,
-            ];
-
-            session()->put('vcart',$newCart);
-            notify()->success('Product added to cart successfully.');
-            return redirect()->back();
-
-        }
-
-
+        };
 
         return view('Frontend.Pages.Cart');
     }
@@ -74,7 +74,4 @@ class CartController extends Controller
     {
         return view('Frontend.Pages.Checkout.checkout');
     }
-
-
 }
-

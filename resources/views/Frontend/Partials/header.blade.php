@@ -31,8 +31,8 @@
                     <i class="bi-cart-fill me-1"></i>
                     𝒞𝒶𝓇𝓉
                     <span class="badge bg-dark text-white ms-1 rounded-pill">
-                        @if(session()->has('vcart'))
-                        {{ count(session()->get('vcart')) }}
+                        @if(session()->has('virtual_cart'))
+                        {{ count(session()->get('virtual_cart')) }}
                         @else
                         0
                         @endif

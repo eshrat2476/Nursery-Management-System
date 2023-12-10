@@ -16,7 +16,7 @@
                 
                 <div class="col-lg-3 col-md-6">
                     <h4 class="text-white mb-4">𝒬𝓊𝒾𝒸𝓀 𝐿𝒾𝓃𝓀𝓈</h4>
-                    <a class="btn btn-link" href="">𝒞𝑜𝓃𝓉𝒶𝒸𝓉 𝒰𝓈</a>
+                    <a class="btn btn-link" href="{{route('contact')}}">𝒞𝑜𝓃𝓉𝒶𝒸𝓉 𝒰𝓈</a>
                     <a class="btn btn-link" href="">𝒪𝓊𝓇 𝒪𝒻𝒻𝑒𝓇𝓈</a>
                     
                 </div>
