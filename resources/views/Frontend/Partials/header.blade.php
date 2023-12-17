@@ -72,7 +72,10 @@
                     <a href="404.html" class="dropdown-item"></a>
                 </div>
             </div>
-            <a href="project.html" class="nav-item nav-link">𝒪𝒻𝒻𝑒𝓇𝓈</a>
+            <a href="{{route('offer')}}" class="nav-item nav-link">𝒪𝒻𝒻𝑒𝓇𝓈</a>
+
+            <a href="{{route('care_tips')}}" class="nav-item nav-link">𝒞𝒶𝓇𝑒 & 𝒯𝒾𝓅𝓈</a>
+
 
             <a href="{{route('contact')}}" class="nav-item nav-link">𝒞𝑜𝓃𝓉𝒶𝒸𝓉</a>
         </div>

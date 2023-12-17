@@ -14,7 +14,10 @@ use App\Http\Controllers\Frontend\CustomerController;
 use App\Http\Controllers\Frontend\ContactController;
 use App\Http\Controllers\Frontend\HomeController as FrontendHomeController;
 use App\Http\Controllers\Frontend\PlantController as FrontendPlantController;
+use App\Http\Controllers\Frontend\CareTipsController as FrontendCareTipsController;
+use App\Http\Controllers\Frontend\OfferController as FrontendOfferController;
 use App\Http\Controllers\Frontend\OrderController as FrontendOrderController;
+
 use App\Http\Controllers\SslCommerzPaymentController;
 
 /*
@@ -215,6 +218,15 @@ Route::get('/checkout', [CartController::class, 'checkout'])->name('checkout');
 //Order
 
 Route::post('/order-place', [FrontendOrderController::class, 'orderPlace'])->name('order_place');
+
+//offer
+
+Route::get('/offer', [FrontendOfferController::class, 'offerlist'])->name('offer');
+
+
+//Care & Tips
+
+Route::get('/care&tips', [FrontendCareTipsController::class, 'caretipslist'])->name('care_tips');
 
 
 
