@@ -34,4 +34,13 @@ class HomeController extends Controller
 
         return view("Frontend.Pages.Search.search", compact('plants'));
     }
+
+
+    public function plantsUnderCategory($category_id)
+    {
+
+        $plantsUnderCategory = Plant::where('plantcategory', $category_id)->get();
+        // $plants=Plants::whereIn('category_id',[4,5])->get();
+        return view('Frontend.Pages.Plants-under-category.Plants-under-category', compact('plantsUnderCategory'));
+    }
 }

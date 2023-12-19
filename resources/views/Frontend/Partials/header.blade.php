@@ -63,15 +63,22 @@
             <a href="{{route('Home')}}" class="nav-item nav-link active">𝐻𝑜𝓂𝑒</a>
             <a href="{{route('website_plants')}}" class="nav-item nav-link">𝒫𝓁𝒶𝓃𝓉𝓈</a>
 
+
+
             <div class="nav-item dropdown">
                 <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">𝒞𝒶𝓉𝑒𝑔𝑜𝓇𝒾𝑒𝓈</a>
                 <div class="dropdown-menu bg-light m-0">
-                    <a href="feature.html" class="dropdown-item"></a>
-                    <a href="team.html" class="dropdown-item"></a>
-                    <a href="testimonial.html" class="dropdown-item"></a>
-                    <a href="404.html" class="dropdown-item"></a>
+                    @foreach ($headerCategories as $category)
+
+                    <a class="dropdown-item" href="  {{ route('plants.under.category',$category->id) }}">{{$category->categoryname}}</a>
+
+                    @endforeach
+
                 </div>
             </div>
+
+
+
             <a href="{{route('offer')}}" class="nav-item nav-link">𝒪𝒻𝒻𝑒𝓇𝓈</a>
 
             <a href="{{route('care_tips')}}" class="nav-item nav-link">𝒞𝒶𝓇𝑒 & 𝒯𝒾𝓅𝓈</a>

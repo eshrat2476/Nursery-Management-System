@@ -173,6 +173,11 @@ Route::get('/', [FrontendHomeController::class, 'home'])->name('Home');
 
 Route::get('/search-product', [FrontendHomeController::class, 'search'])->name('Plant_search');
 
+//Category
+
+Route::get('/plants-under-cagtegory/{cat_id}',[FrontendHomeController::class,'plantsUnderCategory'])->name('plants.under.category');
+
+
 
 //Registration
 
