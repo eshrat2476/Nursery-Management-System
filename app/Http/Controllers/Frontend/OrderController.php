@@ -28,6 +28,8 @@ class OrderController extends Controller
             'address' => $request->address,
             'receiver_mobile' => $request->phone_number,
             'receiver_name' => $request->name,
+            'transaction_id' => date('Ymdhis'),
+            'payment_status' => 'pending',
             'receiver_email' => $request->email_address,
         ]);
 
@@ -60,7 +62,7 @@ class OrderController extends Controller
         $post_data = array();
         $post_data['total_amount'] = $order->total_price; # You cant not pay less than 10
         $post_data['currency'] = "BDT";
-        $post_data['tran_id'] = uniqid(); // tran_id must be unique
+        $post_data['tran_id'] = $order->transaction_id; // tran_id must be unique
 
         # CUSTOMER INFORMATION
         $post_data['cus_name'] = $order->receiver_name;

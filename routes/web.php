@@ -61,6 +61,10 @@ Route::group(['prefix' => 'admin'], function () {
             //Home
             Route::get('/', [HomeController::class, 'home'])->name('home');
 
+            
+            Route::get('/dashboard', [HomeController::class, 'dashboardhome'])->name('dashboard.home');
+
+
 
             //Plants
 

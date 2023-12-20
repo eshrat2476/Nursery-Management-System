@@ -3,7 +3,7 @@
 
 @section('content')
 
-
+@auth
 <div class="container">
     <div class="row">
         <div class="col-12">
@@ -97,4 +97,10 @@
         </div>
     </div>
 </div>
+@endauth
+@guest
+
+@include('Frontend.Pages.login')
+
+@endguest
 @endsection

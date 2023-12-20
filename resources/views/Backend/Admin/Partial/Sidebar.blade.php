@@ -3,7 +3,7 @@
   <ul class="sidebar-nav" id="sidebar-nav">
 
     <li class="nav-item">
-      <a class="nav-link " href="index.html">
+      <a class="nav-link " href="{{route('dashboard.home')}}">
         <i class="fa-solid fa-square fa-spin"></i>
         <span>Admin Dashboard</span>
       </a>

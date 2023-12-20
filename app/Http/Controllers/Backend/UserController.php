@@ -31,7 +31,7 @@ class UserController extends Controller
         if ($login) {
 
             notify()->success('Login Success.');
-            return redirect()->route('home');
+            return redirect()->route('dashboard.home');
         }
 
         notify()->error('Invalid Credentials.');
