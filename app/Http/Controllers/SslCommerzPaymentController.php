@@ -189,6 +189,7 @@ class SslCommerzPaymentController extends Controller
                     // 'status'=>'confirm'
                 ]);
                 notify()->success('payment successfully done');
+                session()->forget('virtual_cart');
                 return redirect()->route('Home');
                 
             }

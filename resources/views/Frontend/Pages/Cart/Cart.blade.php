@@ -128,7 +128,8 @@
                 @if(session()->has('virtual_cart'))
                 @foreach(session()->get('virtual_cart') as $item)
                 <div class="d-flex justify-content-between align-items-center mt-3 p-2 items rounded">
-                    <div class="d-flex flex-row"><img class="rounded" src="https://i.imgur.com/QRwjbm5.jpg" width="40">
+                    <div class="d-flex flex-row">
+                        <img class="rounded" src="{{url('uploads/',$item['photo'])}}" width="40"><pre>     </pre>
                         <div class="ml-2"><span class="font-weight-bold d-block">{{$item['name']}}</span><span class="spec"></span></div>
                     </div>
                     <div class="d-flex flex-row align-items-center"><span class="d-block">{{$item['quantity']}}</span><span class="d-block ml-5 font-weight-bold">${{$item['price']}}</span><i class="fa fa-trash-o ml-3 text-black-50"></i></div>
@@ -142,7 +143,7 @@
 
         <div class="col-md-4">
             <div class="payment-info">
-                <div class="d-flex justify-content-between align-items-center"><span>Card details</span><img class="rounded" src="https://i.imgur.com/WU501C8.jpg" width="30"></div><span class="type d-block mt-3 mb-1">Card type</span><label class="radio"> <input type="radio" name="card" value="payment" checked> <span><img width="30" src="https://img.icons8.com/color/48/000000/mastercard.png" /></span> </label>
+                <div class="d-flex justify-content-between align-items-center"><span>Card details</span></div><span class="type d-block mt-3 mb-1">Card type</span><label class="radio"> <input type="radio" name="card" value="payment" checked> <span><img width="30" src="https://img.icons8.com/color/48/000000/mastercard.png" /></span> </label>
 
                 <label class="radio"> <input type="radio" name="card" value="payment"> <span><img width="30" src="https://img.icons8.com/officel/48/000000/visa.png" /></span> </label>
 
@@ -160,7 +161,7 @@
 
                 <div class="d-flex justify-content-between information"><span>Subtotal</span><span>BDT- @if(session()->get('virtual_cart')){{$subtotal=array_sum(array_column(session()->get('virtual_cart'),'subtotal'))}}@endif</span></div>
                 <div class="d-flex justify-content-between information"><span>Shipping</span><span>BDT- {{$charge='70'}}</span></div>
-                <a href="{{route('checkout')}}" class="d-flex justify-content-between information"><span>Total(Incl. taxes)</span><span>BDT- @if(session()->get('virtual_cart')){{$subtotal+$charge}}@endif</span></div><button style="color: #fff;" class="btn btn-primary btn-block d-flex justify-content-between mt-3" type="button"><span>Checkout<i class="fa fa-long-arrow-right ml-1"></i></span></a>
+                <a href="{{route('checkout')}}" class="d-flex justify-content-between text-white"><span>Total(Incl. taxes)</span><span>BDT- @if(session()->get('virtual_cart')){{$subtotal+$charge}}@endif</span></div><button style="color: #fff;" class="btn btn-primary btn-block d-flex justify-content-between mt-3" type="button"><span>Checkout<i class="fa fa-long-arrow-right ml-1"></i></span></a>
             </div>
         </div>
     </div>

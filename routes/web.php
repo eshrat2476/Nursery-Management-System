@@ -220,9 +220,13 @@ Route::get('/cart-fresh', [CartController::class, 'fresh_cart'])->name('Fresh_Ca
 Route::get('/add-to-cart/{Plant_item_id}', [CartController::class, 'addToCart'])->name('add_toCart');
 
 
-//Checkout
+Route::group(['middleware'=>'auth'],function(){
 
-Route::get('/checkout', [CartController::class, 'checkout'])->name('checkout');
+    //Checkout
+    Route::get('/checkout', [CartController::class, 'checkout'])->name('checkout');
+
+});
+
 
 //Order
 
