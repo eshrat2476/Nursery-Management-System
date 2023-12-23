@@ -61,20 +61,6 @@
 
 
 
-
-    <li class="nav-item">
-      <a class="nav-link collapsed" data-bs-target="#icons-nav" data-bs-toggle="collapse" href="#">
-        <i class="fa-solid fa-truck fa-beat"></i>
-        <span>DELIVERY</span>
-      </a>
-
-    </li><!-- End DELIVERY Nav -->
-
-
-
-
-
-
     <li class="nav-item">
       <a class="nav-link collapsed" href="{{route('admin_users')}}">
         <i class="fa-solid fa-user fa-bounce"></i>
