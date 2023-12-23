@@ -53,7 +53,7 @@
                 </div>
 
 
-                <button class="btn btn-primary btn-lg btn-primary" type="submit">Login</button>
+                <button class="btn btn-primary btn-lg btn-primary " type="submit">Login</button>
 
                 <hr class="my-4">
 

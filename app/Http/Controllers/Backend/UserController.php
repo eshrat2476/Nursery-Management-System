@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Backend;
 
 use App\Http\Controllers\Controller;
+use App\Models\Order;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
@@ -48,9 +49,9 @@ class UserController extends Controller
 
     //User Profile
 
-    public function profile(){
-    return view('Backend.Admin.Pages.Profile.profile');
-    
+    public function profile()
+    {
+        return view('Backend.Admin.Pages.Profile.profile');
     }
 
 
@@ -62,69 +63,69 @@ class UserController extends Controller
 
     public function list()
     {
-        $User_data=User::Paginate(5);
+        $User_data = User::Paginate(5);
 
-        return view('Backend.Admin.Pages.User.list',compact('User_data'));
+        return view('Backend.Admin.Pages.User.list', compact('User_data'));
     }
 
 
 
     //View
 
-public function view($id)
-{
+    public function view($id)
+    {
 
-    $User_data = User::find($id);
+        $User_data = User::find($id);
 
-    return view('Backend.Admin.Pages.User.view', compact('User_data'));
-}
-
-
-//Delete
-
-public function delete($id)
-{
-    $User_data = User::find($id);
-    if ( $User_data) {
-        $User_data->delete();
+        return view('Backend.Admin.Pages.User.view', compact('User_data'));
     }
 
-    notify()->success('User Deleted Successfully.');
-    return redirect()->back();
-}
 
+    //Delete
 
-//Edit
+    public function delete($id)
+    {
+        $User_data = User::find($id);
+        if ($User_data) {
+            $User_data->delete();
+        }
 
-
-public function edit($id)
-{
-
-    $User_data = User::find($id);
-
-    return view('Backend.Admin.Pages.User.edit', compact('User_data'));
-}
-
-//update
-
-public function update(Request $request, $id)
-{
-    $User_data = User::find($id);
-
-    if ($User_data) {
-
-        $User_data->update([
-
-            'name'=>$request->name,
-            'email'=>$request->email,
-            'role'=>$request->role,
-            'password'=>$request->password,
-        ]);
-
-        notify()->success('User updated successfully.');
+        notify()->success('User Deleted Successfully.');
         return redirect()->back();
     }
-}
+
+
+    //Edit
+
+
+    public function edit($id)
+    {
+
+        $User_data = User::find($id);
+
+        return view('Backend.Admin.Pages.User.edit', compact('User_data'));
+    }
+
+    //update
+
+    public function update(Request $request, $id)
+    {
+        $User_data = User::find($id);
+
+        if ($User_data) {
+
+            $User_data->update([
+
+                'name' => $request->name,
+                'email' => $request->email,
+                'role' => $request->role,
+                'password' => $request->password,
+            ]);
+
+            notify()->success('User updated successfully.');
+            return redirect()->back();
+        }
+    }
 
 
 
@@ -140,29 +141,24 @@ public function update(Request $request, $id)
     public function store(Request $request)
     {
 
-        $validate=Validator::make($request->all(),[
-            'name'=>'required',
-            'email'=>'required',
-            'role'=>'required',
-            'password'=>'required',
+        $validate = Validator::make($request->all(), [
+            'name' => 'required',
+            'email' => 'required',
+            'role' => 'required',
+            'password' => 'required',
 
-         ]);
-    
-         if($validate->fails()){
-            return redirect()->back()->withErrors($validate);
-         }
-    
-         User::create([
-            'name'=>$request->name,
-            'email'=>$request->email,
-            'role'=>$request->role,
-            'password'=>$request->password,
         ]);
-    return redirect(route('admin_users'));
 
+        if ($validate->fails()) {
+            return redirect()->back()->withErrors($validate);
+        }
 
+        User::create([
+            'name' => $request->name,
+            'email' => $request->email,
+            'role' => $request->role,
+            'password' => $request->password,
+        ]);
+        return redirect(route('admin_users'));
     }
-
-
-
 }

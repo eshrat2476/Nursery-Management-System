@@ -8,5 +8,11 @@ use Illuminate\Database\Eloquent\Model;
 class OrderDetails extends Model
 {
     use HasFactory;
-    protected $guarded=[];
+    protected $guarded = [];
+
+
+    public function plant()
+    {
+        return $this->belongsTo(Plant::class);
+    }
 }

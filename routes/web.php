@@ -146,6 +146,7 @@ Route::group(['prefix' => 'admin'], function () {
 
 
 
+
             //Users
 
             Route::get('/users', [UserController::class, 'list'])->name('admin_users');
@@ -220,11 +221,11 @@ Route::get('/cart-fresh', [CartController::class, 'fresh_cart'])->name('Fresh_Ca
 Route::get('/add-to-cart/{Plant_item_id}', [CartController::class, 'addToCart'])->name('add_toCart');
 
 
-Route::group(['middleware'=>'auth'],function(){
+Route::group(['middleware' => 'auth'], function () {
 
     //Checkout
     Route::get('/checkout', [CartController::class, 'checkout'])->name('checkout');
-
+    Route::get('/order_details/{id}', [FrontendOrderController::class, 'orderdetails'])->name('order_details');
 });
 
 
@@ -256,5 +257,3 @@ Route::post('/cancel', [SslCommerzPaymentController::class, 'cancel']);
 
 Route::post('/ipn', [SslCommerzPaymentController::class, 'ipn']);
 //SSLCOMMERZ END
-
-

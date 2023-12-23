@@ -12,8 +12,6 @@ class OrderController extends Controller
 {
     public function orderPlace(Request $request)
     {
-
-
         //validation here
 
         // dd($request->all());
@@ -107,5 +105,14 @@ class OrderController extends Controller
             print_r($payment_options);
             $payment_options = array();
         }
+    }
+
+    public function orderdetails($id)
+    {
+        // dd('Hello');
+        $order = Order::with('details')->find($id);
+        $orderdetails = OrderDetails::where('order_id', $id)->get();
+        // dd($orderdetails);
+        return view('Frontend.Pages.OrderDetails.OrderDetails', compact('order', 'orderdetails'));
     }
 }

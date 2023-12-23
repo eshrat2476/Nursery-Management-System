@@ -96,6 +96,81 @@
         </div>
     </div>
 </div>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $imgSrc = $('#imgProfile').attr('src');
+
+        function readURL(input) {
+
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+
+                reader.onload = function(e) {
+                    $('#imgProfile').attr('src', e.target.result);
+                };
+
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+        $('#btnChangePicture').on('click', function() {
+            // document.getElementById('profilePicture').click();
+            if (!$('#btnChangePicture').hasClass('changing')) {
+                $('#profilePicture').click();
+            } else {
+                // change
+            }
+        });
+        $('#profilePicture').on('change', function() {
+            readURL(this);
+            $('#btnChangePicture').addClass('changing');
+            $('#btnChangePicture').attr('value', 'Confirm');
+            $('#btnDiscard').removeClass('d-none');
+            // $('#imgProfile').attr('src', '');
+        });
+        $('#btnDiscard').on('click', function() {
+            // if ($('#btnDiscard').hasClass('d-none')) {
+            $('#btnChangePicture').removeClass('changing');
+            $('#btnChangePicture').attr('value', 'Change');
+            $('#btnDiscard').addClass('d-none');
+            $('#imgProfile').attr('src', $imgSrc);
+            $('#profilePicture').val('');
+            // }
+        });
+    });
+</script>
+<hr>
+<table class="table" align="center">
+    <thead>
+        <tr>
+            <th scope="col">Order Id</th>
+            <th scope="col">Date</th>
+            <th scope="col">Status</th>
+            <th scope="col">Action</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach($list as $order)
+        <tr>
+            <th scope="row">{{ $order->id }}</th>
+            <td>{{ $order->created_at}}</td>
+            <td>{{ $order->status }}</td>
+            <td><a class="btn btn-danger" href="{{route('order_details',$order->id)}}">View Details</a> </td>
+
+
+
+        </tr>
+
+        @endforeach
+
+    </tbody>
+</table>
+</body>
+
+</html>
+
+
 @endauth
 @guest
 

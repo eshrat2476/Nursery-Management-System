@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
+use App\Models\Order;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
@@ -79,12 +80,15 @@ class CustomerController extends Controller
 
 
 
-    
+
 
     //Customer Profile
 
     public function profile()
     {
-        return view('Frontend.Pages.Profile.profile');
+        $id = auth()->user()->id;
+        $list = Order::where('user_id', $id)->get();
+        //dd($list);
+        return view('Frontend.Pages.Profile.profile', compact('list'));
     }
 }
