@@ -1,6 +1,7 @@
 @extends('Frontend.fronthome')
 
 @section('content')
+<br>
 
 <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
 
@@ -8,6 +9,7 @@
     @if($plantsUnderCategory->count()>0)
 
     @foreach ($plantsUnderCategory as $plants)
+
 
     <div class="col mb-5">
         <div class="card h-100">
@@ -31,6 +33,7 @@
                         {{ $plants->plantprice }} .BDT
 
 
+
                     </div>
                 </div>
             </a>
@@ -41,6 +44,7 @@
             </div>
         </div>
     </div>
+
     @endforeach
 
     @else
@@ -50,6 +54,6 @@
 
 
 
-
 </div>
+
 @endsection

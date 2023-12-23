@@ -15,7 +15,6 @@
                             <div class="image-container">
                                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRF7D5VuqJvQB3TXblnwGTpu7kaFUNhvGATo8lMTE_eEnNm9fAn23q0I3aIU4QZbJy0kF8&usqp=CAU" id="imgProfile" style="width: 150px; height: 150px" class="img-thumbnail" />
                                 <div class="middle">
-                                    <a href="">Edit</a>
                                 </div>
                             </div>
                             <div class="userData ml-3">

@@ -61,7 +61,7 @@ Route::group(['prefix' => 'admin'], function () {
             //Home
             Route::get('/', [HomeController::class, 'home'])->name('home');
 
-            
+
             Route::get('/dashboard', [HomeController::class, 'dashboardhome'])->name('dashboard.home');
 
 
@@ -179,7 +179,7 @@ Route::get('/search-product', [FrontendHomeController::class, 'search'])->name('
 
 //Category
 
-Route::get('/plants-under-cagtegory/{cat_id}',[FrontendHomeController::class,'plantsUnderCategory'])->name('plants.under.category');
+Route::get('/plants-under-cagtegory/{cat_id}', [FrontendHomeController::class, 'plantsUnderCategory'])->name('plants.under.category');
 
 
 
@@ -252,3 +252,5 @@ Route::post('/cancel', [SslCommerzPaymentController::class, 'cancel']);
 
 Route::post('/ipn', [SslCommerzPaymentController::class, 'ipn']);
 //SSLCOMMERZ END
+
+
