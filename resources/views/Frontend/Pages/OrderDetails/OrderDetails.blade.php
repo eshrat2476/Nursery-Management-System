@@ -26,12 +26,11 @@
                             <strong>Shipped To:</strong>
                             <br>{{$order->user_id}}<br>
                             <b>Address: {{$order->receiver_address}}</b><br>
+                            {{$order->receiver_name}}<br>
                             {{$order->receiver_email}}<br>
                             {{$order->receiver_mobile}}<br>
-                            {{$order->receiver_name}}<br>
                             {{$order->payment_status}}<br>
                             {{$order->transaction_id}}<br>
-                            {{$order->status}}<br>
                             <br>
                             {{$order->order_note}}<br>
 

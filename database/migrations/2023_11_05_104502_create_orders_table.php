@@ -17,7 +17,7 @@ return new class extends Migration
             $table->foreignId('user_id')->constrained('users');
             $table->string('status')->default('pending');
             $table->double('total_price')->default(0.0);
-            $table->string('payment_method')->default('cod');
+            $table->string('payment_method')->nullable();
             $table->string('address');
             $table->string('receiver_mobile');
             $table->string('receiver_name');

@@ -28,6 +28,7 @@ class OrderController extends Controller
             'receiver_name' => $request->name,
             'transaction_id' => date('Ymdhis'),
             'payment_status' => 'pending',
+            'payment_method' => $request->payment_method,
             'receiver_email' => $request->email_address,
         ]);
 

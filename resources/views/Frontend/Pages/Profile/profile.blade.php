@@ -146,6 +146,7 @@
             <th scope="col">Order Id</th>
             <th scope="col">Date</th>
             <th scope="col">Status</th>
+            <th scope="col">Payment Method</th>
             <th scope="col">Action</th>
         </tr>
     </thead>
@@ -155,7 +156,9 @@
         <tr>
             <th scope="row">{{ $order->id }}</th>
             <td>{{ $order->created_at}}</td>
-            <td>{{ $order->status }}</td>
+            <td>{{ $order->payment_status }}</td>
+            <td>{{ $order->payment_method}}</td>
+
             <td><a class="btn btn-danger" href="{{route('order_details',$order->id)}}">View Details</a> </td>
 
 
