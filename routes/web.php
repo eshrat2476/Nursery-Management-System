@@ -207,6 +207,8 @@ Route::get('/Customer_profile', [CustomerController::class, 'profile'])->name('C
 
 //Plants
 
+Route::get('/website_single_plants/{plant_id}', [FrontendPlantController::class, 'singlePlantView'])->name('website_single_plants');
+
 Route::get('/website_plants', [FrontendPlantController::class, 'showlist'])->name('website_plants');
 
 
@@ -258,4 +260,3 @@ Route::post('/cancel', [SslCommerzPaymentController::class, 'cancel']);
 
 Route::post('/ipn', [SslCommerzPaymentController::class, 'ipn']);
 //SSLCOMMERZ END
-

@@ -18,6 +18,7 @@
             @foreach($Plant_data as $Plant_item)
                 <div style="float: left; width: 250px;" class="card m-2">
                     <div class="col-md-8 offset-md-2 pt-5">
+                        <a href="{{route('website_single_plants',$Plant_item->id)}}">
                     <img style="height:200px; width:300px;" src="{{url('uploads/',$Plant_item->plantimage)}}" alt="plantimage">
                     </div>
                     <div class="card-body text-center mx-auto">
@@ -39,6 +40,7 @@
                         </div>
                     </div>
                 </div>
+                </a>
             @endforeach
         </div>
     </div>

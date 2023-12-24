@@ -12,4 +12,9 @@ class PlantController extends Controller
         $Plant_data=Plant::all();
         return view('Frontend.Pages.Plants.Plants',compact('Plant_data'));
     }
+
+    public function singlePlantView($plantId){
+        $singlePlantItem=Plant::find($plantId);
+        return view('Frontend.Pages.Plants.SinglePlant',compact('singlePlantItem'));
+    }
 }
