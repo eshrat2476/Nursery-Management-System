@@ -138,13 +138,12 @@ Route::group(['prefix' => 'admin'], function () {
 
 
 
+
             //Orders
 
             Route::get('/orders', [OrderController::class, 'list'])->name('admin_orders');
 
-
-
-
+            Route::get('/orders_search', [OrderController::class, 'search'])->name('admin_orders_search');
 
 
             //Users
@@ -257,3 +256,4 @@ Route::post('/cancel', [SslCommerzPaymentController::class, 'cancel']);
 
 Route::post('/ipn', [SslCommerzPaymentController::class, 'ipn']);
 //SSLCOMMERZ END
+

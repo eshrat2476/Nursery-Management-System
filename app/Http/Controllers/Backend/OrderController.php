@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Backend;
 
 use App\Http\Controllers\Controller;
 use App\Models\Order;
+use App\Models\Plant;
 use Illuminate\Http\Request;
 
 class OrderController extends Controller
@@ -21,4 +22,21 @@ class OrderController extends Controller
         //dd($order);
         return view('Frontend.Pages.OrderDetails.OrderDetails', compact('order'));
     }
+
+
+    public function search(Request $request)
+    {
+        // dd(request()->all())
+
+        if ($request->search) {
+            $plants = Order::where('user_id', 'LIKE', '%' . $request->search . '%')->get();
+            //select * from Plants where name like % rose %;
+        } else {
+            $plants = Order::all();
+        }
+        return view("Backend.Admin.Pages.Order.Search", compact('plants'));
+    }
+
+
+
 }
