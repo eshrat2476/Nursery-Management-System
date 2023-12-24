@@ -7,6 +7,8 @@
     <div class="row">
         <div class="col-xs-12">
             <div class="invoice-title">
+                <br>
+                <h1>Invoice</h1>
                 {{-- <h2>Invoice</h2><h3 class="pull-right">{{$order->id}}</h3> --}}
             </div>
             <hr>
@@ -66,7 +68,7 @@
                             <thead>
                                 <tr>
                                     <th class="text-center" scope="col">Id</th>
-                                    <th class="text-center" scope="col">PlantId</th>
+                                    <th class="text-center" scope="col">PlantName</th>
                                     <th class="text-center" scope="col">Quantity</th>
                                     <th class="text-end" scope="col">Price</th>
                                 </tr>
@@ -76,7 +78,7 @@
                                 @foreach($orderdetails as $item)
                                 <tr class="border">
                                     <td class="text-center">{{$item->id}}</td>
-                                    <td class="text-center">{{$item->plant_id}}</td>
+                                    <td class="text-center">{{$item->plant->plantname}}</td>
                                     <td class="text-center">{{$item->quantity}}</td>
                                     <td class="text-end">{{$item->subtotal}}</td>
                                 </tr>

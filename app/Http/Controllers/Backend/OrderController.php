@@ -29,12 +29,12 @@ class OrderController extends Controller
         // dd(request()->all())
 
         if ($request->search) {
-            $plants = Order::where('user_id', 'LIKE', '%' . $request->search . '%')->get();
-            //select * from Plants where name like % rose %;
+            $plants = Order::where('id', 'LIKE', '%' . $request->search . '%')->get();
+            //select * from Plants where id like % rose %;
         } else {
             $plants = Order::all();
         }
-        return view("Backend.Admin.Pages.Order.Search", compact('plants'));
+        return redirect()->back();
     }
 
 

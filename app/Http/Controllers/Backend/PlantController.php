@@ -20,6 +20,11 @@ class PlantController extends Controller
     }
 
 
+    public function print()
+    {
+        $Plant_data = Plant::all();
+        return view('Backend.Admin.Pages.Plant.print', compact('Plant_data'));
+    }
 
 
     //View

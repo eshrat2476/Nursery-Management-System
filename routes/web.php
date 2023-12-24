@@ -68,6 +68,8 @@ Route::group(['prefix' => 'admin'], function () {
 
             //Plants
 
+            Route::get('/plants/print', [PlantController::class, 'print'])->name('admin_plants_print');
+
             Route::get('/plants', [PlantController::class, 'list'])->name('admin_plants');
 
             Route::get('/plant/view/{id}', [PlantController::class, 'view'])->name('plant_view');
