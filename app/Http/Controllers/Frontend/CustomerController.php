@@ -87,8 +87,10 @@ class CustomerController extends Controller
     public function profile()
     {
         $id = auth()->user()->id;
+        $pending=Order::where('user_id',$id)->where('status','=','pending')->count();
+        $confirm=Order::where('user_id',$id)->where('status','=','confirm')->count();
         $list = Order::where('user_id', $id)->get();
         //dd($list);
-        return view('Frontend.Pages.Profile.profile', compact('list'));
+        return view('Frontend.Pages.Profile.profile', compact('pending','confirm','list'));
     }
 }
