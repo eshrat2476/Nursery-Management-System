@@ -72,8 +72,6 @@ Route::group(['prefix' => 'admin'], function () {
 
             Route::get('/plants', [PlantController::class, 'list'])->name('admin_plants');
 
-            Route::get('/plant/view/{id}', [PlantController::class, 'view'])->name('plant_view');
-
             Route::get('/plant/edit/{id}', [PlantController::class, 'edit'])->name('plant_edit');
 
             Route::get('/plant/delete/{id}', [PlantController::class, 'delete'])->name('plant_delete');
@@ -89,8 +87,6 @@ Route::group(['prefix' => 'admin'], function () {
             //Category
 
             Route::get('/categories', [CategoryController::class, 'list'])->name('admin_categories');
-
-            Route::get('/categories/view/{id}', [CategoryController::class, 'view'])->name('categories_view');
 
             Route::get('/categories/edit/{id}', [CategoryController::class, 'edit'])->name('categories_edit');
 
@@ -108,8 +104,6 @@ Route::group(['prefix' => 'admin'], function () {
 
             Route::get('/care-tips', [CareTipsController::class, 'list'])->name('admin_care_tips');
 
-            Route::get('/care-tips/view/{id}', [CareTipsController::class, 'view'])->name('care-tips_view');
-
             Route::get('/care-tips/edit/{id}', [CareTipsController::class, 'edit'])->name('care-tips_edit');
 
             Route::get('/care-tips/delete/{id}', [CareTipsController::class, 'delete'])->name('care-tips_delete');
@@ -125,8 +119,6 @@ Route::group(['prefix' => 'admin'], function () {
             //Offers
 
             Route::get('/offers', [OfferController::class, 'list'])->name('admin_offers');
-
-            Route::get('/offers/view/{id}', [OfferController::class, 'view'])->name('offers_view');
 
             Route::get('/offers/edit/{id}', [OfferController::class, 'edit'])->name('offers_edit');
 
@@ -151,8 +143,6 @@ Route::group(['prefix' => 'admin'], function () {
             //Users
 
             Route::get('/users', [UserController::class, 'list'])->name('admin_users');
-
-            Route::get('/users/view/{id}', [UserController::class, 'view'])->name('users_view');
 
             Route::get('/users/edit/{id}', [UserController::class, 'edit'])->name('users_edit');
 

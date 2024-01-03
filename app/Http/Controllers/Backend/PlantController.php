@@ -27,21 +27,6 @@ class PlantController extends Controller
     }
 
 
-    //View
-
-    public function view($id)
-    {
-
-        $Plant_item = Plant::find($id);
-
-        $Category_data = Category::all();
-
-        return view('Backend.Admin.Pages.Plant.view', compact('Category_data', 'Plant_item'));
-    }
-
-
-
-
 
     //Delete
 

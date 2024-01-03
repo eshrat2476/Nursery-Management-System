@@ -18,20 +18,6 @@ class CategoryController extends Controller
 
 
 
-    //View
-
-    public function view($id)
-    {
-
-        $Plant_item = Plant::all();
-
-        $Category_data = Category::find($id);
-
-        return view('Backend.Admin.Pages.Category.view', compact('Category_data', 'Plant_item'));
-    }
-
-
-
     //Delete
 
     public function delete($id)

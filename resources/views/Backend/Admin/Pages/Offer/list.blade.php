@@ -24,11 +24,10 @@
         <tr>
             <th scope="row">{{$offersitem->id}}</th>
             <td>{{$offersitem->plantname}}</td>
-            <td>{{$offersitem->originalprice}}</td>
-            <td>{{$offersitem->offerprice}}</td>
+            <td>{{$offersitem->originalprice}} .BDT</td>
+            <td>{{$offersitem->offerprice}} .BDT</td>
             <td>{{$offersitem->offerstatus}}</td>
             <td>
-                <a class="btn btn-primary btn-sm" href="{{route('offers_view',$offersitem->id)}}">View</a>
                 <a class="btn btn-warning btn-sm" href="{{route('offers_edit',$offersitem->id)}}">Edit</a>
                 <a class="btn btn-danger btn-sm" href="{{route('offers_delete',$offersitem->id)}}">Delete</a>
             </td>

@@ -23,7 +23,7 @@
 
     <div class="form-group">
         <label for="inputPlantPrice">Plant Price</label>
-        <input value="{{$Plant_item->plantprice}}" type="number" class="form-control" name="plantprice" id="inputPlantPrice" aria-describedby="emailHelp" placeholder="Enter Price">
+        <input value="{{$Plant_item->plantprice}}" type="number" class="form-control" name="plantprice" min="0" id="inputPlantPrice" aria-describedby="emailHelp" placeholder="Enter Price">
         <small id="emailHelp" class="form-text text-muted"></small>
         @error('plantprice')
         <div class="alert alert-danger">{{$message}}</div>
@@ -64,12 +64,9 @@
         @enderror
     </div>
 
+<br>
 
-
-    <div class="form-check">
-        <input type="checkbox" class="form-check-input" id="exampleCheck1">
-        <label class="form-check-label" for="exampleCheck1">Check me out</label>
-    </div>
+  
     <button type="update" class="btn btn-primary">Update</button>
 </form>
 

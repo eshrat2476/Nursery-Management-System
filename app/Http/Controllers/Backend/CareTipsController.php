@@ -17,18 +17,6 @@ class CareTipsController extends Controller
     }
 
 
-//View
-
-public function view($id)
-{
-    $Plant_item = Plant::all();
-
-    $CareTips_data = CareTips::find($id);
-
-    return view('Backend.Admin.Pages.CareTips.view', compact('CareTips_data','Plant_item'));
-}
-
-
 //Delete
 
 public function delete($id)

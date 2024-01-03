@@ -25,7 +25,6 @@
       <td>{{$User_item->email}}</td>
       <td>{{$User_item->role}}</td>
       <td>
-        <a class="btn btn-primary btn-sm" href="{{route('users_view',$User_item->id)}}">View</a>
         <a class="btn btn-warning btn-sm" href="{{route('users_edit',$User_item->id)}}">Edit</a>
         <a class="btn btn-danger btn-sm" href="{{route('users_delete',$User_item->id)}}">Delete</a>
       </td>

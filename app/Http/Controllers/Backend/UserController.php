@@ -70,16 +70,6 @@ class UserController extends Controller
 
 
 
-    //View
-
-    public function view($id)
-    {
-
-        $User_data = User::find($id);
-
-        return view('Backend.Admin.Pages.User.view', compact('User_data'));
-    }
-
 
     //Delete
 

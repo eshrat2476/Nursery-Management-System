@@ -15,17 +15,6 @@ class OfferController extends Controller
         return view('Backend.Admin.Pages.Offer.list',compact('Offers_data'));
     }
 
-//View
-
-public function view($id)
-{
-    $Plant_item = Plant::all();
-
-    $Offers_data = Offers::find($id);
-
-    return view('Backend.Admin.Pages.Offer.view', compact('Offers_data','Plant_item'));
-}
-
 
 //Delete
 
