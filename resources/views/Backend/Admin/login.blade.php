@@ -33,7 +33,7 @@
           <div class="card shadow-2-strong" style="border-radius: 1rem;">
             <div class="card-body p-5 text-center">
 
-              <h3 class="mb-5">Admin Panel</h3>
+              <h1 class="mb-5">Admin Panel</h1>
               <form action="{{route('admin_login_post')}}" method="post">
                 @csrf
                 <div class="form-outline mb-4">
@@ -52,7 +52,16 @@
                   @enderror
                 </div>
 
-
+                <style>
+                  .btn-primary {
+                    background-color: #28a745;
+                    /* Set the fixed background color */
+                    border-color: #218838;
+                    /* Set the fixed border color */
+                    color:  #ffffff;
+                    /* Set the fixed text color */
+                  }
+                </style>
                 <button class="btn btn-primary btn-lg btn-primary " type="submit">Login</button>
 
                 <hr class="my-4">

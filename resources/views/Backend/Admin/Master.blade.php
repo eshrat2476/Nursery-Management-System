@@ -23,6 +23,7 @@
   <link href="assets/img/favicon.png" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">    
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 
   <!-- Google Fonts -->
   <link href="https://fonts.gstatic.com" rel="preconnect">
@@ -36,6 +37,7 @@
   <link href="{{asset('backend')}}/vendor/quill/quill.bubble.css" rel="stylesheet">
   <link href="{{asset('backend')}}/vendor/remixicon/remixicon.css" rel="stylesheet">
   <link href="{{asset('backend')}}/vendor/simple-datatables/style.css" rel="stylesheet">
+  
 
   <!-- Template Main CSS File -->
   <link href="{{asset('backend')}}/css/style.css" rel="stylesheet">

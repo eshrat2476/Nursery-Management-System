@@ -75,7 +75,7 @@
                 <div class='cvp'>
 
                     <h5 class="card-title font-weight-bold">{{$Plant_item->plantname}}</h5>
-                    <p class="card-text">Tk {{$Plant_item->offerstatus}}</p>
+                    <p class="card-text"> {{$Plant_item->offerstatus}}</p>
                     <p class="card-text">Tk {{$Plant_item->originalprice}}  .BDT</p>
                     <p class="card-text">Tk {{$Plant_item->offerprice}}  .BDT</p>
 

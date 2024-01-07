@@ -10,16 +10,6 @@
 <br>
 
 
-<div class="col-lg-4 px-5 d-inline-flex align-items- text-start">
-            <form class="col-lg-12" action="{{route('admin_orders_search')}}" method="get">
-                <input style="border-radius: 10px;" class="col-lg-9" type="text" class="form-control" placeholder="Search..." name="search">
-                <button class="col-lg-2" type="submit" class="btn btn-success">Search</button>
-            </form>
-        </div>
-
-<br>
-<br>
-
 <table class="table">
   <thead class="thead-light">
     <tr>
