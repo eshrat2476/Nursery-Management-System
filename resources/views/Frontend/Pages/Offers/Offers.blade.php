@@ -75,9 +75,9 @@
                 <div class='cvp'>
 
                     <h5 class="card-title font-weight-bold">{{$Plant_item->plantname}}</h5>
-                    <p class="card-text"> {{$Plant_item->offerstatus}}</p>
+                    <p class="card-text" style="color: red;">{{$Plant_item->offerstatus}}</p>
                     <p class="card-text">Tk {{$Plant_item->originalprice}}  .BDT</p>
-                    <p class="card-text">Tk {{$Plant_item->offerprice}}  .BDT</p>
+                    <p class="emoji-text">&#x1F60D;Tk {{$Plant_item->offerprice}}  .BDT</p>
 
                     <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="{{route('add_toCart',$Plant_item->id)}}">Add to cart</a></div>
                 </div>
