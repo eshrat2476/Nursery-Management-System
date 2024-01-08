@@ -22,7 +22,7 @@ return new class extends Migration
             $table->string('receiver_mobile');
             $table->string('receiver_name');
             $table->string('transaction_id');
-            $table->string('payment_status');
+            $table->string('payment_status')->default('pending');
             $table->string('receiver_email')->nullable();
             $table->text('order_note')->nullable();
             $table->timestamps();

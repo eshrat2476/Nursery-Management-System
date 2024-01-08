@@ -159,6 +159,7 @@
             <td>{{ $order->payment_status }}</td>
             <td>{{ $order->payment_method}}</td>
 
+
             <td><a class="btn btn-danger" href="{{route('order_details',$order->id)}}">View Details</a> </td>
 
 

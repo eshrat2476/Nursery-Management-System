@@ -21,6 +21,8 @@
       <th scope="col">Payment Method</th>
       <th scope="col">Total Price</th>
       <th scope="col">Order Note</th>
+      <th scope="col">Payment Status</th>
+      <th scope="col">Order Status</th>
       <th scope="col">Action</th>
 
 
@@ -37,13 +39,18 @@
       <td>{{$Order_item->payment_method}}</td>
       <td>{{$Order_item->total_price}}</td>
       <td>{{$Order_item->order_note}}</td>
+      <td>{{$Order_item->status}}</td>
+      <td>{{$Order_item->payment_status}}</td>
+
+
+      
 
       <td>
 
 
-      <a class="btn btn-primary btn-sm"  href="">View</a>
-      <a class="btn btn-warning btn-sm"  href="">Edit</a>
-      <a class="btn btn-danger btn-sm"  href="">Delete</a>
+      <a class ="btn btn-primary btn-sm" href="{{route('orders_view',$Order_item->id)}}">View</a>
+      
+      <a class="btn btn-danger btn-sm"  href="">Cancel</a>
         
 
       </td>

@@ -38,5 +38,25 @@ class OrderController extends Controller
     }
 
 
+    public function view( $id){
+        $order = Order::with('details')->find($id);
+        // dd($order);
+        return view('Backend.Admin.Pages.Order.view',compact('order'));
+    }
+
+
+
+    public function status(Request $request, $id){
+        // dd('hi');
+        $order = Order::find($id);
+        // dd($order);
+        $order->update([
+            'status'=>($request->status),
+
+        ]);
+        return view('Backend.Admin.Pages.Order.view',compact('order'));
+    }
+
+   
 
 }

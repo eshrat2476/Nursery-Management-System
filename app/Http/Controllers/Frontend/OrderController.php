@@ -27,7 +27,7 @@ class OrderController extends Controller
             'receiver_mobile' => $request->phone_number,
             'receiver_name' => $request->name,
             'transaction_id' => date('Ymdhis'),
-            'payment_status' => 'pending',
+            'payment_status' => 'null',
             'payment_method' => $request->payment_method,
             'receiver_email' => $request->email_address,
         ]);

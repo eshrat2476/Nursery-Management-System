@@ -86,7 +86,6 @@ class SslCommerzPaymentController extends Controller
             print_r($payment_options);
             $payment_options = array();
         }
-
     }
 
     public function payViaAjax(Request $request)
@@ -157,7 +156,6 @@ class SslCommerzPaymentController extends Controller
             print_r($payment_options);
             $payment_options = array();
         }
-
     }
 
     public function success(Request $request)
@@ -185,13 +183,13 @@ class SslCommerzPaymentController extends Controller
                 Here you can also sent sms or email for successfull transaction to customer
                 */
                 $order->update([
-                    'payment_status'=> 'confirm',
+                    'status' => 'confirm',
+                    'payment_status' => 'success'
                     // 'status'=>'confirm'
                 ]);
                 notify()->success('payment successfully done');
                 session()->forget('virtual_cart');
                 return redirect()->route('Home');
-                
             }
         } else if ($order->status == 'Processing' || $order->status == 'confirm') {
             /*
@@ -201,10 +199,8 @@ class SslCommerzPaymentController extends Controller
         } else {
             #That means something wrong happened. You can redirect customer to your product page.
             notify()->error('Invalid Transaction');
-                return redirect()->route('Home');
+            return redirect()->route('Home');
         }
-
-
     }
 
     public function fail(Request $request)
@@ -225,7 +221,6 @@ class SslCommerzPaymentController extends Controller
         } else {
             echo "Transaction is Invalid";
         }
-
     }
 
     public function cancel(Request $request)
@@ -246,8 +241,6 @@ class SslCommerzPaymentController extends Controller
         } else {
             echo "Transaction is Invalid";
         }
-
-
     }
 
     public function ipn(Request $request)
@@ -292,5 +285,4 @@ class SslCommerzPaymentController extends Controller
             echo "Invalid Data";
         }
     }
-
 }
