@@ -50,7 +50,6 @@
 
       <a class ="btn btn-primary btn-sm" href="{{route('orders_view',$Order_item->id)}}">View</a>
       
-      <a class="btn btn-danger btn-sm"  href="">Cancel</a>
         
 
       </td>

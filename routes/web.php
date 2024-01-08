@@ -86,6 +86,9 @@ Route::group(['prefix' => 'admin'], function () {
 
             //Category
 
+            Route::get('/categories/print', [CategoryController::class, 'print'])->name('admin_categories_print');
+
+
             Route::get('/categories', [CategoryController::class, 'list'])->name('admin_categories');
 
             Route::get('/categories/edit/{id}', [CategoryController::class, 'edit'])->name('categories_edit');

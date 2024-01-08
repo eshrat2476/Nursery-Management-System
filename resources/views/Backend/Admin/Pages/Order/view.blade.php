@@ -157,6 +157,8 @@
 		<option value="processing">confirm</option>
         <option value="handedOver">handed over</option>
         <option value="ontheway">on the way</option>
+		<option value="cancel">cancel</option>
+
         </select>
     </div>
     <button type="submit" class="btn btn-primary">Submit</button>

@@ -31,6 +31,11 @@ class CategoryController extends Controller
         return redirect()->back();
     }
 
+    public function print()
+    {
+        $Category_data = Category::all();
+        return view('Backend.Admin.Pages.Category.print', compact('Category_data'));
+    }
 
     //Edit
 
