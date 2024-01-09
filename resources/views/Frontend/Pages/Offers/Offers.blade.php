@@ -67,27 +67,28 @@
             padding-bottom: 10px;
         }
     </style>
+    <div>
+        @foreach($Offers_data as $Plant_item)
+        <div style="float: left; width: 250px;" class="card m-2">
+            <div class="col-md-8 offset-md-2 pt-5">
+                <div class="card-body text-center mx-auto">
+                    <div class='cvp'>
 
-    @foreach($Offers_data as $Plant_item)
-    <div class='container-fluid'>
-        <div class="card mx-auto col-md-3 col-10 mt-5">
-            <div class="card-body text-center mx-auto">
-                <div class='cvp'>
+                        <h5 class="card-title font-weight-bold">{{$Plant_item->plantname}}</h5>
+                        <p class="card-text" style="color: red;">{{$Plant_item->offerstatus}}</p>
+                        <p class="card-text">Tk {{$Plant_item->originalprice}} .BDT</p>
+                        <p class="emoji-text">&#x1F60D;Tk {{$Plant_item->offerprice}} .BDT</p>
 
-                    <h5 class="card-title font-weight-bold">{{$Plant_item->plantname}}</h5>
-                    <p class="card-text" style="color: red;">{{$Plant_item->offerstatus}}</p>
-                    <p class="card-text">Tk {{$Plant_item->originalprice}}  .BDT</p>
-                    <p class="emoji-text">&#x1F60D;Tk {{$Plant_item->offerprice}}  .BDT</p>
-
-                    <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="{{route('add_toCart',$Plant_item->id)}}">Add to cart</a></div>
+                        <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="{{route('add_toCart',$Plant_item->id)}}">Add to cart</a></div>
+                    </div>
                 </div>
             </div>
         </div>
 
+        @endforeach
+
     </div>
-
-    @endforeach
-
 </div>
+
 
 @endsection

@@ -46,6 +46,8 @@
     <div class="row">
         <div class="col-xs-12">
     		<div class="invoice-title">
+				<h1>Order Invoice</h1>
+				<hr>
     			{{-- <h2>Invoice</h2><h3 class="pull-right">{{$order->id}}</h3> --}}
     		</div>
     		<hr>
@@ -54,15 +56,15 @@
     				<address>
     				<strong>Billed To:</strong><br>
     					{{$order->user_id}}<br>
-    					{{$order->receiver_address}}<br>
+    					{{$order->address}}<br>
     				</address>
     			</div>
                
     			<div class="col-xs-6 text-right">
     				<address>
         			<strong>Shipped To:</strong><br>
-                    {{$order->user_id}}<br>
-                    {{$order->receiver_address}}<br>
+                
+					{{$order->address}}<br>
     				</address>
     			</div>
     		</div>
@@ -70,8 +72,8 @@
     			<div class="col-xs-6">
     				<address>
     					<strong>Payment Method:</strong><br>
-    					Visa ending **** 4242<br>
-    					jsmith@email.com
+						{{$order->payment_method}}<br>
+    					
     				</address>
     			</div>
     			<div class="col-xs-6 text-right">
@@ -133,9 +135,8 @@
     								<td class="no-line"></td>
     								<td class="no-line"></td>
     								<td class="no-line text-center"><strong>Total</strong></td>
-    								<td class="no-line text-right">{{$Order_item->total}}</td>
+    								<td class="no-line text-right">{{$Order_item->subtotal}}</td>
     							</tr>
-                                <a class ="btn btn-primary btn-sm" href="#">Update</a>
     						</tbody>
                             
                           </table>
@@ -158,18 +159,10 @@
         <option value="handedOver">handed over</option>
         <option value="ontheway">on the way</option>
 		<option value="cancel">cancel</option>
-
         </select>
     </div>
     <button type="submit" class="btn btn-primary">Submit</button>
   </form>
    
    
-   
-       
-         
-       
-   
-
-
 @endsection

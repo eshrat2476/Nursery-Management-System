@@ -121,8 +121,8 @@
                 <hr>
                 <h6 class="mb-0">Shopping cart</h6>
                 <div class="d-flex justify-content-between"><span>You have @if(session()->get('virtual_cart')) {{count(session()->get('virtual_cart'))}} @else 0 @endif items in your cart</span>
-                    <div class="d-flex flex-row align-items-center"><span class="text-black-50">Sort by:</span>
-                        <div class="price ml-2"><span class="mr-1">price</span><i class="fa fa-angle-down"></i></div>
+                    <div class="d-flex flex-row align-items-center"><span class="text-black-50"><strong>Price:</strong></span>
+                        <div class="price ml-2"><span class="mr-1"></span></div>
                     </div>
                 </div>
                 @if(session()->has('virtual_cart'))
@@ -132,7 +132,7 @@
                         <img class="rounded" src="{{url('uploads/',$item['photo'])}}" width="40"><pre>     </pre>
                         <div class="ml-2"><span class="font-weight-bold d-block">{{$item['name']}}</span><span class="spec"></span></div>
                     </div>
-                    <div class="d-flex flex-row align-items-center"><span class="d-block">{{$item['quantity']}}</span><span class="d-block ml-5 font-weight-bold">${{$item['price']}}</span><i class="fa fa-trash-o ml-3 text-black-50"></i></div>
+                    <div class="d-flex flex-row align-items-center"><span class="d-block">{{$item['quantity']}}</span><span class="d-block ml-5 font-weight-bold">*{{$item['price']}}.BDT</span><i class="fa fa-trash-o ml-3 text-black-50"></i></div>
                 </div>
                 @endforeach
                 @endif

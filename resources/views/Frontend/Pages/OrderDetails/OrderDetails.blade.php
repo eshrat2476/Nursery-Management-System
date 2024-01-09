@@ -17,20 +17,19 @@
                     <div class="col-md-6">
                         <address>
                             <strong>Billed To:</strong><br>
-                            {{$order->user_id}}<br>
-                            {{$order->address}}<br>
+                            <b>{{$order->user_id}}</b><br>
+                            <b>{{$order->address}}</b><br>
                         </address>
                     </div>
                     <div class="col-md-6 text-right">
                         <address>
                             <strong>Shipped To:</strong>
-                            <br>{{$order->user_id}}<br>
-                            <b>Address: {{$order->receiver_address}}</b><br>
-                            {{$order->receiver_name}}<br>
-                            {{$order->receiver_email}}<br>
-                            {{$order->receiver_mobile}}<br>
-                            {{$order->payment_status}}<br>
-                            {{$order->transaction_id}}<br>
+                            <br><b>{{$order->user_id}}</b><br>
+                            <b>{{$order->receiver_name}}</b><br>
+                            <b>Address: {{$order->address}}</b><br>
+                            <b>{{$order->receiver_email}}</b><br>
+                           <b>Phone-No: {{$order->receiver_mobile}}</b><br>
+                           <b>{{$order->transaction_id}}</b><br>
                             <br>
                             {{$order->order_note}}<br>
 
@@ -42,13 +41,13 @@
                 <div class="col-md-6">
                     <address>
                         <strong>Payment Method:</strong><br>
-                        {{$order->payment_method}}<br>
+                        <b>{{$order->payment_method}}</b><br>
                     </address>
                 </div>
                 <div class="col-md-6 text-right">
                     <address>
                         <strong>Order Date:</strong><br>
-                        {{$order->created_at}}<br><br>
+                        <b>{{$order->created_at}}</b><br><br>
                     </address>
                 </div>
             </div>
@@ -76,10 +75,10 @@
 
                                 @foreach($orderdetails as $item)
                                 <tr class="border">
-                                    <td class="text-center">{{$item->id}}</td>
-                                    <td class="text-center">{{$item->plant->plantname}}</td>
-                                    <td class="text-center">{{$item->quantity}}</td>
-                                    <td class="text-end">{{$item->subtotal}}</td>
+                                    <td class="text-center"><b>{{$item->id}}</b></td>
+                                    <td class="text-center"><b>{{$item->plant->plantname}}</b></td>
+                                    <td class="text-center"><b>{{$item->quantity}}</b></td>
+                                    <td class="text-end"><b>{{$item->subtotal}}</b></td>
                                 </tr>
                                 @endforeach
                             </tbody>

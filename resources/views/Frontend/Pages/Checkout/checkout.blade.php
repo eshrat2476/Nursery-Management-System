@@ -27,44 +27,42 @@
 
                             <div class="span1"></div>
                             <div class="col-md-6 col-xs-12">
-                                <strong> Name:</strong>
-                                <input type="text" name="name" class="form-control" value="{{auth()->user()->name}}" />
+                                <strong class="required-star"> Name:</strong>
+                                <input type="text" name="name"  required  class="form-control" value="{{auth()->user()->name}}" />
                             </div>
                         </div>
                         <div class="form-group">
-                            <div class="col-md-12"><strong>Address:</strong></div>
+                            <div class="col-md-12"><strong class="required-star">Address:</strong></div>
                             <div class="col-md-12">
-                                <input type="text" name="address" class="form-control" value="" />
+                                <input type="text" name="address" required  class="form-control" value="" />
                             </div>
                         </div>
                         <div class="form-group">
-                            <div class="col-md-12"><strong>City:</strong></div>
+                            <div class="col-md-12"><strong class="required-star">City:</strong></div>
                             <div class="col-md-12">
-                                <input type="text" name="city" class="form-control" value="" />
+                                <input type="text" name="city"  required  class="form-control" value="" />
+                            </div>
+                        </div>
+
+
+                        <div class="form-group">
+                            <div class="col-md-12"><strong class="required-star">Phone Number:</strong></div>
+                            <div class="col-md-12"><input type="text" name="phone_number" required   class="form-control" value="">
+                                <style>
+                                    .required-star::after {
+                                        content: '*';
+                                        color: red;
+                                        margin-right: 2px;
+                                    }
+                                </style>
                             </div>
                         </div>
                         <div class="form-group">
-                            <div class="col-md-12"><strong>State:</strong></div>
-                            <div class="col-md-12">
-                                <input type="text" name="state" class="form-control" value="" />
-                            </div>
+                            <div class="col-md-12"><strong class="required-star">Email Address:</strong></div>
+                            <div class="col-md-12"><input type="text" name="email_address"  required   class="form-control" value="{{auth()->user()->email}}" /></div>
                         </div>
                         <div class="form-group">
-                            <div class="col-md-12"><strong>Zip / Postal Code:</strong></div>
-                            <div class="col-md-12">
-                                <input type="text" name="zip_code" class="form-control" value="" />
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <div class="col-md-12"><strong>Phone Number:</strong></div>
-                            <div class="col-md-12"><input type="text" name="phone_number" class="form-control" value="" /></div>
-                        </div>
-                        <div class="form-group">
-                            <div class="col-md-12"><strong>Email Address:</strong></div>
-                            <div class="col-md-12"><input type="text" name="email_address" class="form-control" value="{{auth()->user()->email}}" /></div>
-                        </div>
-                        <div class="form-group">
-                            <label for="InputPaymentMethod">Payment Method:</label>
+                            <label for="InputPaymentMethod"><strong class="required-star">Payment Method:</strong></label>
                             <select name="payment_method" id="" class="form-control" required>
                                 <option value="Bkash">Bkash</option>
                                 <option value="Rocket">Rocket</option>

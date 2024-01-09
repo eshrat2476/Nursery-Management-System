@@ -15,7 +15,6 @@
                             <div class="row justify-content-center">
                                 <div class="col-lg-8">
                                     <h1 class="display-1 text-white mb-5 animated slideInDown">ℐ𝓃 𝒪𝓇𝒹ℯ𝓇 𝓉ℴ ℬ𝓁ℴℴ𝓂 𝒴ℴ𝓊 ℳ𝓊𝓈𝓉 𝒢𝓇ℴ𝓌</h1>
-                                    <a href="" class="btn btn-primary py-sm-3 px-sm-4">Explore More</a>
                                 </div>
                             </div>
                         </div>
@@ -30,7 +29,6 @@
                             <div class="row justify-content-center">
                                 <div class="col-lg-7">
                                     <h1 class="display-1 text-white mb-5 animated slideInDown">𝒞𝓇ℯ𝒶𝓉ℯ 𝒴ℴ𝓊𝓇 𝒪𝓌𝓃 𝒮𝓂𝒶𝓁𝓁 𝒢𝒶𝓇𝒹ℯ𝓃 𝒜𝓉 ℋℴ𝓂ℯ</h1>
-                                    <a href="" class="btn btn-primary py-sm-3 px-sm-4">Explore More</a>
                                 </div>
                             </div>
                         </div>
