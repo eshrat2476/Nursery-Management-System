@@ -39,8 +39,8 @@
       <td>{{$Order_item->payment_method}}</td>
       <td>{{$Order_item->total_price}}</td>
       <td>{{$Order_item->order_note}}</td>
-      <td>{{$Order_item->status}}</td>
       <td>{{$Order_item->payment_status}}</td>
+      <td>{{$Order_item->status}}</td>
 
 
       

@@ -183,12 +183,14 @@ class SslCommerzPaymentController extends Controller
                 Here you can also sent sms or email for successfull transaction to customer
                 */
                 $order->update([
-                    'status' => 'confirm',
-                    'payment_status' => 'success'
-                    // 'status'=>'confirm'
+                    'status' => 'success',
+                    'payment_status' => 'confirm'
+                
                 ]);
+               
+                    session()->forget('virtual_cart');
+                
                 notify()->success('payment successfully done');
-                session()->forget('virtual_cart');
                 return redirect()->route('Home');
             }
         } else if ($order->status == 'Processing' || $order->status == 'confirm') {
