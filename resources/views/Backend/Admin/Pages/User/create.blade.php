@@ -35,7 +35,7 @@
     <label for="inputUserRole" class="required-star">Role</label>
      <select name="role" class="form-control" id="inputUserRole">
      <option>Select Your Role</option>
-      <option value="Admin">Admin</option>
+      <option value="Accounts">Accounts</option>
       <option value="Manager">Manager</option>
      </select>
     @error('role')

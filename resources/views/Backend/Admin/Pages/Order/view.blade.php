@@ -129,7 +129,7 @@
     								<td class="no-line"></td>
     								<td class="no-line"></td>
     								<td class="no-line text-center"><strong>Shipping</strong></td>
-    								<td class="no-line text-right">100 .BDT</td> 
+    								<td class="no-line text-right">70.BDT</td> 
     							</tr>
     							<tr>
     								<td class="no-line"></td>

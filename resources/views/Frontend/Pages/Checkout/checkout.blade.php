@@ -66,7 +66,7 @@
                             <select name="payment_method" id="" class="form-control" required>
                                 <option value="Bkash">Bkash</option>
                                 <option value="Rocket">Rocket</option>
-                                <option value="COD">COD</option>
+                                <option value="Nogod">Nogod</option>
                             </select>
                         </div>
                     </div>

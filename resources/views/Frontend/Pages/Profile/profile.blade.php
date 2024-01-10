@@ -145,7 +145,7 @@
         <tr>
             <th scope="col">Order Id</th>
             <th scope="col">Date</th>
-            <th scope="col">Payment Status</th>
+            <th scope="col">Order Status</th>
             <th scope="col">Payment Method</th>
             <th scope="col">Action</th>
         </tr>
@@ -156,7 +156,7 @@
         <tr>
             <th scope="row">{{ $order->id }}</th>
             <td>{{ $order->created_at}}</td>
-            <td>{{ $order->payment_status }}</td>
+            <td>{{ $order->status}}</td>
             <td>{{ $order->payment_method}}</td>
 
 
