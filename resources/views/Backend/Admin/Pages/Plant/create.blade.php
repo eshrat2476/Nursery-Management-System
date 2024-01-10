@@ -22,7 +22,7 @@
   </div>
 
   <label for="inputPlantPrice" class="required-star">Plant Price</label>
-  <input type="number" class="form-control" name="plantprice" min="0" id="inputPlantPrice" aria-describedby="emailHelp" placeholder="Enter Price">
+  <input type="number" class="form-control" name="plantprice" min="1" id="inputPlantPrice" aria-describedby="emailHelp" placeholder="Enter Price">
   <small id="emailHelp" class="form-text text-muted"></small>
   @error('plantprice')
   <div class="alert alert-danger">{{$message}}</div>
@@ -30,7 +30,7 @@
   </div>
 
   <label for="quantity" class="required-star"> Quantity</label>
-  <input type="number" class="form-control" name="quantity" min="0" id="inputPlantPrice"  placeholder="Enter quantity">
+  <input type="number" class="form-control" name="quantity" min="1" id="inputPlantPrice"  placeholder="Enter quantity">
   <small id="quantity" class="form-text text-muted"></small>
   @error('plantprice')
   <div class="alert alert-danger">{{$message}}</div>

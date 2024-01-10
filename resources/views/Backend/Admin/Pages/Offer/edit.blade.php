@@ -19,7 +19,7 @@
 
   <div class="form-group">
     <label for="inputOriginalPrice">Original price</label>
-    <input value="{{$Offers_data->originalprice}}" type="number" name="originalprice" class="form-control" id="inputOriginalPrice" aria-describedby="emailHelp" placeholder="Input Original Price">
+    <input value="{{$Offers_data->originalprice}}" type="number" name="originalprice" class="form-control" min="1" id="inputOriginalPrice" aria-describedby="emailHelp" placeholder="Input Original Price">
     <small id="emailHelp" class="form-text text-muted"></small>
     @error('originalprice')
     <div class="alert alert-danger">{{$message}}</div>
@@ -29,7 +29,7 @@
 
   <div class="form-group">
     <label for="inputOfferPrice">offer Price</label>
-    <input value="{{$Offers_data->offerprice}}" type="number" name="offerprice" class="form-control" id="inputOfferPrice" aria-describedby="emailHelp" placeholder="Input Offer Price">
+    <input value="{{$Offers_data->offerprice}}" type="number" name="offerprice" class="form-control" min="1" id="inputOfferPrice" aria-describedby="emailHelp" placeholder="Input Offer Price">
     <small id="emailHelp" class="form-text text-muted"></small>
     @error('offerprice')
     <div class="alert alert-danger">{{$message}}</div>

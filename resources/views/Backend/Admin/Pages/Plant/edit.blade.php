@@ -23,7 +23,7 @@
 
     <div class="form-group">
         <label for="inputPlantPrice">Plant Price</label>
-        <input value="{{$Plant_item->plantprice}}" type="number" class="form-control" name="plantprice" min="0" id="inputPlantPrice" aria-describedby="emailHelp" placeholder="Enter Price">
+        <input value="{{$Plant_item->plantprice}}" type="number" class="form-control" name="plantprice" min="1" id="inputPlantPrice" aria-describedby="emailHelp" placeholder="Enter Price">
         <small id="emailHelp" class="form-text text-muted"></small>
         @error('plantprice')
         <div class="alert alert-danger">{{$message}}</div>
@@ -31,7 +31,7 @@
     </div>
 
     <label for="quantity" class="required-star"> Quantity</label>
-  <input  value="{{$Plant_item->quantity}}" type="number" class="form-control" name="quantity" min="0" id="inputPlantPrice"  placeholder="Enter quantity">
+  <input  value="{{$Plant_item->quantity}}" type="number" class="form-control" name="quantity" min="1" id="inputPlantPrice"  placeholder="Enter quantity">
   <small id="quantity" class="form-text text-muted"></small>
   @error('plantprice')
   <div class="alert alert-danger">{{$message}}</div>
