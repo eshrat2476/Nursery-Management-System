@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Library\SslCommerz\SslCommerzNotification;
 use App\Models\Order;
 use App\Models\OrderDetails;
+use App\Models\Plant;
 use Illuminate\Http\Request;
 
 class OrderController extends Controller
@@ -43,7 +44,27 @@ class OrderController extends Controller
                 'quantity' => $item['quantity'],
                 'subtotal' => $item['subtotal'],
             ]);
+
         }
+        
+     
+
+        
+        
+        
+        foreach($cart as $item){
+            $plant = Plant::find($item['id']);
+            
+            $newquantity =$plant->quantity-$item['quantity'];
+            
+            $plant->update([
+                'quantity' =>$newquantity,
+                'total' =>$newquantity * $plant->plantprice,
+            ]);
+        }
+        
+
+        
 
         session()->forget('virtual_cart');
 

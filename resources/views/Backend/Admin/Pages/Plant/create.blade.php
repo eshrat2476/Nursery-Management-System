@@ -29,6 +29,13 @@
   @enderror
   </div>
 
+  <label for="quantity" class="required-star"> Quantity</label>
+  <input type="number" class="form-control" name="quantity" min="0" id="inputPlantPrice"  placeholder="Enter quantity">
+  <small id="quantity" class="form-text text-muted"></small>
+  @error('plantprice')
+  <div class="alert alert-danger">{{$message}}</div>
+  @enderror
+  </div>
 
   <div class="form-group">
     <label for="insertPlantImage" class="required-star">Plant Image</label>
