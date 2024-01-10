@@ -29,7 +29,7 @@
             <td>{{$offersitem->offerstatus}}</td>
             <td>
                 <a class="btn btn-warning btn-sm" href="{{route('offers_edit',$offersitem->id)}}">Edit</a>
-                <a class="btn btn-danger btn-sm" href="{{route('offers_delete',$offersitem->id)}}">Delete</a>
+                <a class="btn btn-danger btn-sm" onclick="showAlert()" href="{{route('offers_delete',$offersitem->id)}}">Delete</a>
             </td>
         </tr>
         @endforeach
@@ -41,3 +41,9 @@
 
 
 @endsection
+
+<script>
+  function showAlert() {
+    alert("Are You Sure You Want To Delete this Item?");
+  }
+</script>

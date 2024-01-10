@@ -26,7 +26,7 @@ public function delete($id)
         $CareTips_data->delete();
     }
 
-    notify()->success('Category Deleted Successfully.');
+    notify()->success('Care&Tips Deleted Successfully.');
     return redirect()->back();
 }
 
@@ -59,7 +59,7 @@ public function update(Request $request, $id)
             'pesticides'=>$request->pesticides,
         ]);
 
-        notify()->success('Plant updated successfully.');
+        notify()->success('Care&Tips updated successfully.');
         return redirect()->back();
     }
 }

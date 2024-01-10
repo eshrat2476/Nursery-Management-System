@@ -70,17 +70,6 @@
     </li><!-- End USERS Nav -->
 
 
-
-
-    <li class="nav-item">
-      <a class="nav-link collapsed" data-bs-target="#icons-nav" data-bs-toggle="collapse" href="#">
-        <i class="fa-solid fa-toolbox fa-beat"></i>
-        <span>REPORT</span>
-      </a>
-
-    </li><!-- End REPORT Nav -->
-
-
   </ul>
 
 </aside>

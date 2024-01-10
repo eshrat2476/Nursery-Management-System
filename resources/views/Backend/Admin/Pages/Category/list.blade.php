@@ -33,7 +33,7 @@
       <td>{{$Category_item->categorydescription}}</td>
       <td>
         <a class="btn btn-warning btn-sm" href="{{route('categories_edit',$Category_item->id)}}">Edit</a>
-        <a class="btn btn-danger btn-sm" href="{{route('categories_delete',$Category_item->id)}}">Delete</a>
+        <a class="btn btn-danger btn-sm" onclick="showAlert()" href="{{route('categories_delete',$Category_item->id)}}">Delete</a>
 
       </td>
     </tr>
@@ -45,4 +45,9 @@
 
 @endsection
 
+<script>
+  function showAlert() {
+    alert("Are You Sure You Want To Delete this Item?");
+  }
+</script>
 

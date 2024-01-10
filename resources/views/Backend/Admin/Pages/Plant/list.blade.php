@@ -39,7 +39,7 @@
 
 
           <a class="btn btn-warning btn-sm" href="{{route('plant_edit',$Plant_item->id)}}">Edit</a>
-          <a class="btn btn-danger btn-sm" href="{{route('plant_delete',$Plant_item->id)}}">Delete</a>
+          <a class="btn btn-danger btn-sm" onclick="showAlert()" href="{{route('plant_delete',$Plant_item->id)}}">Delete</a>
 
 
         </td>
@@ -52,3 +52,9 @@
 
 
   @endsection
+
+  <script>
+  function showAlert() {
+    alert("Are You Sure You Want To Delete this Item?");
+  }
+</script>

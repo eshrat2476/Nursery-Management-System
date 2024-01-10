@@ -64,7 +64,7 @@ class CategoryController extends Controller
                 'categorydescription' => $request->categorydescription,
             ]);
 
-            notify()->success('Plant updated successfully.');
+            notify()->success('Category updated successfully.');
             return redirect()->back();
         }
     }
