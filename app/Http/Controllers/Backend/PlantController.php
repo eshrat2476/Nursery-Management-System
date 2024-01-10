@@ -73,6 +73,9 @@ class PlantController extends Controller
                 'plantname' => $request->plantname,
                 'plantprice' => $request->plantprice,
                 'plantimage' => $file_name,
+                'quantity' => $request->quantity,
+                'total' => $request->quantity*$request->plantprice,
+
                 // 'plantcategory' => $request->categoryname,
                 'plantdescription' => $request->plantdescription
             ]);
@@ -100,7 +103,8 @@ class PlantController extends Controller
             'plantprice' => 'required',
             'plantimage' => 'required',
             'category_id' => 'required',                 //input field name tarpor required
-            'plantdescription' => 'required'
+            'plantdescription' => 'required',
+            'quantity' => 'required',
         ]);
 
         if ($validate->fails()) {
@@ -123,6 +127,8 @@ class PlantController extends Controller
             'plantimage' => $file_name,                           //column name=>form input name
             'plantcategory' => $request->category_id,
             'plantdescription' => $request->plantdescription,
+            'quantity' => $request->quantity,
+            'total' => $request->quantity*$request->plantprice,
         ]);
         return redirect(route('admin_plants'));
     }

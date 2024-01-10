@@ -18,6 +18,8 @@
         <th scope="col">ID</th>
         <th scope="col">Name</th>
         <th scope="col">Price</th>
+        <th scope="col">Quantity</th>
+        <th scope="col">Total Price</th>
         <th scope="col">Image</th>
         <th scope="col">Plant Category</th>
         <th scope="col">Description</th>
@@ -30,6 +32,8 @@
         <th scope="row">{{$Plant_item->id}}</th>
         <td>{{$Plant_item->plantname}}</td>
         <td>{{$Plant_item->plantprice}}</td>
+        <td>{{$Plant_item->quantity}}</td>
+        <td>{{$Plant_item->total}}</td>
         <td>
           <img style="height:60px; width:60px;" src="{{url('uploads/',$Plant_item->plantimage)}}" alt="plantimage">
         </td>

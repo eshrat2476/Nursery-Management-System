@@ -14,7 +14,10 @@ return new class extends Migration
         Schema::create('plants', function (Blueprint $table) {
             $table->id();
             $table->string('plantname');
-            $table->string('plantprice');
+            $table->integer('plantprice');
+            $table->integer('quantity');
+            $table->double('total');
+
             $table->string('plantimage');
             $table->string('plantcategory');
             $table->string('plantdescription');
