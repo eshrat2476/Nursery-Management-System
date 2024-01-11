@@ -9,28 +9,24 @@
     @csrf <div class="form-group">
         <label for="InputCustomerName">Deliveryman name </label>
         <input type="text" class="form-control" name="name" id="InputCustomerName" aria-describedby="emailHelp" placeholder="Enter your name">
-        <small id="emailHelp" class="form-text text-muted">Enter your name</small>
+        <small id="emailHelp" class="form-text text-muted"></small>
     </div>
 
 
     <div class="form-group">
-        <label for="InputCustomerEmail"> address </label>
+        <label for="InputCustomerEmail"> Address </label>
         <input type="text" class="form-control" name="address" id="InputCustomerEmail" aria-describedby="emailHelp" placeholder="Enter your address">
-        <small id="emailHelp" class="form-text text-muted">Enter your email address</small>
+        <small id="emailHelp" class="form-text text-muted"></small>
     </div>
 
 
     <div class="form-group">
-        <label for="InputCustomerNumber">Contact number </label>
+        <label for="InputCustomerNumber"> Contact number </label>
         <input type="number" class="form-control" name="number" id="InputCustomerNumber" aria-describedby="emailHelp" placeholder="Enter your number">
-        <small id="emailHelp" class="form-text text-muted">Enter your Number</small>
+        <small id="emailHelp" class="form-text text-muted"></small>
     </div>
 
 
-    <div class="form-group">
-        <label for="exampleInputPassword1">Password</label>
-        <input type="password" class="form-control" name="password" id="exampleInputPassword1" placeholder="Password">
-    </div>
 
 
 

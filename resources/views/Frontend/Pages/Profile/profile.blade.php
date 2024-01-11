@@ -19,8 +19,8 @@
                             </div>
                             <div class="userData ml-3">
                                 <h2 class="d-block" style="font-size: 1.5rem; font-weight: bold"><a href="javascript:void(0);">{{auth()->user()->name}}</a></h2>
-                                <h6 class="d-block"><a href="javascript:void(0)">{{$confirm}}</a> Confirm Orders</h6>
-                                <h6 class="d-block"><a href="javascript:void(0)">{{$pending}}</a> Pending Oders</h6>
+                                <h6 class="d-block"><a href="javascript:void(0)"></a> </h6>
+                                <h6 class="d-block"><a href="javascript:void(0)"></a> </h6>
                             </div>
                             <div class="ml-auto">
                                 <input type="button" class="btn btn-primary d-none" id="btnDiscard" value="Discard Changes" />
@@ -147,7 +147,6 @@
             <th scope="col">Date</th>
             <th scope="col">Order Status</th>
             <th scope="col">Payment Method</th>
-            <th scope="col">Delivery Man</th>
             <th scope="col">Action</th>
         </tr>
     </thead>
@@ -159,10 +158,6 @@
             <td>{{ $order->created_at}}</td>
             <td>{{ $order->status}}</td>
             <td>{{ $order->payment_method}}</td>
-            {{-- <td>{{ $order->deliveryman }}</td> --}}
-            <td>{{$order->deliver->name ?? null}}</td>
-
-
 
             <td><a class="btn btn-danger" href="{{route('order_details',$order->id)}}">View Details</a> </td>
 
@@ -170,7 +165,7 @@
 
         </tr>
 
-        
+
 
         @endforeach
 
