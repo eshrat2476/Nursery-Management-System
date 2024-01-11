@@ -12,9 +12,10 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('orders', function (Blueprint $table) {
-        
+
             $table->id();
             $table->foreignId('user_id')->constrained('users');
+            $table->string('deliverymen')->nullable();
             $table->string('status')->default('pending');
             $table->double('total_price')->default(0.0);
             $table->string('payment_method')->nullable();
@@ -24,7 +25,7 @@ return new class extends Migration
             $table->string('transaction_id');
             $table->string('payment_status')->default('pending');
             $table->string('receiver_email')->nullable();
-            $table->text('order_note')->nullable();
+
             $table->timestamps();
         });
     }

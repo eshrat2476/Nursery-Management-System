@@ -23,7 +23,7 @@ class OrderController extends Controller
         $order = Order::create([
             'user_id' => auth()->user()->id,
             'status' => 'pending',
-            'total_price' => array_sum(array_column($cart, 'subtotal')),
+            'total_price' => array_sum(array_column($cart, 'subtotal')) + 70,
             'address' => $request->address,
             'receiver_mobile' => $request->phone_number,
             'receiver_name' => $request->name,
@@ -31,6 +31,7 @@ class OrderController extends Controller
             'payment_status' => 'pending',
             'payment_method' => $request->payment_method,
             'receiver_email' => $request->email_address,
+
         ]);
 
 
@@ -44,27 +45,26 @@ class OrderController extends Controller
                 'quantity' => $item['quantity'],
                 'subtotal' => $item['subtotal'],
             ]);
-
         }
-        
-     
 
-        
-        
-        
-        foreach($cart as $item){
+
+
+
+
+
+        foreach ($cart as $item) {
             $plant = Plant::find($item['id']);
-            
-            $newquantity =$plant->quantity-$item['quantity'];
-            
+
+            $newquantity = $plant->quantity - $item['quantity'];
+
             $plant->update([
-                'quantity' =>$newquantity,
-                'total' =>$newquantity * $plant->plantprice,
+                'quantity' => $newquantity,
+                'total' => $newquantity * $plant->plantprice,
             ]);
         }
-        
 
-        
+
+
 
         session()->forget('virtual_cart');
 

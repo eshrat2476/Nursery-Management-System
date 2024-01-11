@@ -5,6 +5,7 @@ use App\Http\Controllers\Backend\HomeController;
 use App\Http\Controllers\Backend\PlantController;
 use App\Http\Controllers\Backend\CategoryController;
 use App\Http\Controllers\Backend\CareTipsController;
+use App\Http\Controllers\Backend\DeliveryController;
 use App\Http\Controllers\Backend\UserController;
 use App\Http\Controllers\Backend\OfferController;
 use App\Http\Controllers\Backend\OrderController;
@@ -150,6 +151,9 @@ Route::group(['prefix' => 'admin'], function () {
 
             Route::get('/orders_search', [OrderController::class, 'search'])->name('admin_orders_search');
 
+            Route::post('/order/view/deliveryman/{id}', [OrderController::class, 'deliveryman'])->name('order.view.deliveryman');
+
+
 
             //Users
 
@@ -164,6 +168,16 @@ Route::group(['prefix' => 'admin'], function () {
             Route::get('/users-create', [UserController::class, 'create'])->name('admin_user_create');
 
             Route::post('/users-store', [UserController::class, 'store'])->name('admin_user_store');
+
+            //Delivery
+
+
+            Route::get('/Delivery/list', [DeliveryController::class, 'list'])->name('Delivery.list');
+            Route::get('/Delivery/create', [DeliveryController::class, 'create'])->name('Delivery.create');
+            Route::post('/Delivery/store', [DeliveryController::class, 'store'])->name('Delivery.store');
+
+
+
         });
     });
 });

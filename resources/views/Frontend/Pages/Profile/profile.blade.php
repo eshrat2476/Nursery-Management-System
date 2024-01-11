@@ -147,6 +147,7 @@
             <th scope="col">Date</th>
             <th scope="col">Order Status</th>
             <th scope="col">Payment Method</th>
+            <th scope="col">Delivery Man</th>
             <th scope="col">Action</th>
         </tr>
     </thead>
@@ -158,6 +159,9 @@
             <td>{{ $order->created_at}}</td>
             <td>{{ $order->status}}</td>
             <td>{{ $order->payment_method}}</td>
+            {{-- <td>{{ $order->deliveryman }}</td> --}}
+            <td>{{$order->deliver->name ?? null}}</td>
+
 
 
             <td><a class="btn btn-danger" href="{{route('order_details',$order->id)}}">View Details</a> </td>
@@ -165,6 +169,8 @@
 
 
         </tr>
+
+        
 
         @endforeach
 

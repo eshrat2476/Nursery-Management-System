@@ -135,7 +135,7 @@
     								<td class="no-line"></td>
     								<td class="no-line"></td>
     								<td class="no-line text-center"><strong>Total</strong></td>
-    								<td class="no-line text-right">{{$Order_item->subtotal}}</td>
+    								<td class="no-line text-right">{{$Order_item->subtotal+'70'}}</td>
     							</tr>
     						</tbody>
                             
@@ -149,7 +149,8 @@
 		</script>
 </body>
 </html>
-<form action="{{route('order_view_status',$order->id)}}" method="post">
+<form action="{{route('order.view.deliveryman',$order->id)}}" method="post">
+
     
 @csrf
     <div class="form-group">
@@ -160,6 +161,21 @@
         <option value="ontheway">on the way</option>
 		<option value="cancel">cancel</option>
         </select>
+    </div>
+
+	<div class="form-group">
+        <label for="InputPaymentMethod">Delivery man:</label>
+		<select name="deliveryMan" id="" class="form-control" required>
+		<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+			<option value="" selected disabled> Select Delivery Man </option>
+			@foreach ($deliveryman as $delivery)
+			{{-- <li>
+				<a class="dropdown-item" href="{{ route('Delivery.list',$delivery->id) }}">{{$delivery->name}}</a>
+			</li> --}}
+			<option value={{$delivery->name}} {{ $delivery->id == $order->deliveryMan ? "selected" : "" }}> {{$delivery->name}} </option>
+			@endforeach
+		  </ul>
+		</select>
     </div>
     <button type="submit" class="btn btn-primary">Submit</button>
   </form>

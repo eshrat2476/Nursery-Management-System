@@ -78,7 +78,7 @@
                                     <td class="text-center"><b>{{$item->id}}</b></td>
                                     <td class="text-center"><b>{{$item->plant->plantname}}</b></td>
                                     <td class="text-center"><b>{{$item->quantity}}</b></td>
-                                    <td class="text-end"><b>{{$item->subtotal}}</b></td>
+                                    <td class="text-end"><b>{{$item->subtotal+'70'}}</b></td>
                                 </tr>
                                 @endforeach
                             </tbody>

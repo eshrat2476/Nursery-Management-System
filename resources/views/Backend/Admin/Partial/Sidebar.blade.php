@@ -69,6 +69,15 @@
 
     </li><!-- End USERS Nav -->
 
+    <li class="nav-item">
+      <a class="nav-link collapsed" href="{{route('Delivery.list')}}">
+        <i class="fa-solid fa-user fa-bounce"></i>
+        <span>Delivery Man</span>
+      </a>
+
+    </li><!-- End USERS Nav -->
+
+
 
   </ul>
 

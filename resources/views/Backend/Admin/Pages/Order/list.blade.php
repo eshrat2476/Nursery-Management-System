@@ -23,6 +23,7 @@
       <th scope="col">Order Note</th>
       <th scope="col">Payment Status</th>
       <th scope="col">Order Status</th>
+      <th scope="col">Deliveryman</th>
       <th scope="col">Action</th>
 
 
@@ -41,6 +42,8 @@
       <td>{{$Order_item->order_note}}</td>
       <td>{{$Order_item->payment_status}}</td>
       <td>{{$Order_item->status}}</td>
+      <td>{{$Order_item->deliverymen}}</td>
+
 
 
       
